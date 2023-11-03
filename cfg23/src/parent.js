@@ -1,5 +1,5 @@
 import React from "react";
-import profilePic from "../images/profilePic.jpg"
+import profilePic from "../public/profilePic.jpg"
 
 function ChildBar() {
     return (
@@ -87,6 +87,17 @@ function ReferralView() {
                 <p>Group y</p>
                 <p>Group z</p>
             </section>
+        </div>
+    );
+}
+
+export default function ParentView() {
+    return (
+        <div>
+            <ChildBar />
+            <ScoresView />
+            <ProfileView />
+            <ReferralView />
         </div>
     );
 }
