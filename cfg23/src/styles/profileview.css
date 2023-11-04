@@ -1,0 +1,20 @@
+.profileView {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 300px;
+    margin-top: 10%;
+    background-color: #f9f9f9;
+}
+
+.profileView img {
+    border-radius: 50%;
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.profileView p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}

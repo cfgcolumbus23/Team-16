@@ -1,0 +1,11 @@
+.newcomponent {
+    font-size: 1.5em;
+    color: #000000;
+    text-align: center;
+    margin-right: auto;
+    width: 1%;
+}
+
+.scoresView button {
+    margin-right: 100em;
+}
