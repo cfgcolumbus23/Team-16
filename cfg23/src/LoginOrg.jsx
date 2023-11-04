@@ -10,7 +10,7 @@ function Login() {
   const handleLogin = () => {
     console.log("Username:", username);
     console.log("Password:", password);
-    navigate("/org");
+    navigate("/organizer");
   };
   //Returns a login container which allows user to either login or create a new account
   return (

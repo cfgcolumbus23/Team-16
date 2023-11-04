@@ -6,7 +6,8 @@ import "./styles/profileview.css";
 import "./styles/referralview.css";
 import profile_pic from "./assets/profile.png";
 
-//display child bar. Render new component displaying specified child information when clicking on image.
+//displays the list of assigned children which include profile pic, name, and other relevant information.
+//handleImageClick allows the user to click on a child's image in order to pull up their relevant information.
 function ChildBar({ handleImageClick }) {
   const children = [
     { img: profile_pic, name: "Child 1 Name", info: "Information" },
@@ -18,7 +19,7 @@ function ChildBar({ handleImageClick }) {
     { img: profile_pic, name: "Child 7 Name", info: "Information" },
     { img: profile_pic, name: "Child 8 Name", info: "Information" },
   ];
- 
+
   const handleClick = (index) => {
     console.log(`Image clicked: ${index}`);
     handleImageClick(index);
@@ -26,7 +27,8 @@ function ChildBar({ handleImageClick }) {
   return (
     <div className="childBar">
       <div className="title">
-        <h3 align="center">Referrals</h3>
+        <h3 align="center">Assigned Students</h3>
+        <h4 align="center">Select a Student</h4>
       </div>
       <div className="rand">
         {children.map((child, index) => (
