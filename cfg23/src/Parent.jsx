@@ -36,7 +36,6 @@ function ChildBar() {
   );
 }
 
-// Get a quick overview of a child's scores and categorical progress
 function ScoresView() {
   return (
     <div className="scoresView">
