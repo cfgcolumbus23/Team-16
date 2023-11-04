@@ -4,7 +4,8 @@ import "./styles/parent.css";
 import line from "./assets/line.png";
 import bar from "./assets/color_bar.png";
 
-//return the child information based on which child was clicked, displaying their scores
+//return the child information based on which child was clicked,
+//displaying their scores in each of the categories
 function NewComponent({ onDelete }) {
   const handleDelete = () => {
     onDelete();

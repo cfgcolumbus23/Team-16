@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./login.css";
 
+//creates the component for allowing a user to login to their account
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");

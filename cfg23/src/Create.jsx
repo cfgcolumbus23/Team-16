@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Create.css";
 import { useNavigate } from "react-router-dom";
 
+//provides a user interface for creating a new account with a username and password. When the form is
+//submitted, it logs the credentials and navigates back to the home page.
 function CreateAccount() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");

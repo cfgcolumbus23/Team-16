@@ -6,6 +6,8 @@ import "./styles/profileview.css";
 import "./styles/referralview.css";
 import profile_pic from "./assets/profile.png";
 
+//displays the list of assigned children which include profile pic, name, and other relevant information.
+//handleImageClick allows the user to click on a child's image in order to pull up their relevant information.
 function ChildBar({ handleImageClick }) {
   const children = [
     { img: profile_pic, name: "Child 1 Name", info: "Information" },
@@ -17,7 +19,7 @@ function ChildBar({ handleImageClick }) {
     { img: profile_pic, name: "Child 7 Name", info: "Information" },
     { img: profile_pic, name: "Child 8 Name", info: "Information" },
   ];
- 
+
   const handleClick = (index) => {
     console.log(`Image clicked: ${index}`);
     handleImageClick(index);

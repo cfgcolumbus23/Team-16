@@ -8,6 +8,10 @@ import "./styles/profileview.css";
 import "./styles/referralview.css";
 import profile_pic from "./assets/profile.png";
 
+//manages a state in order to control the visibility of a New component based on
+//how the user interacts. If an image is clicked, shownewcomponent is set to true,
+//which displays the new component.If delete action is triggered, shownewcomponent is set
+//back to false, which hides the new component.
 function ParentComponent() {
   const [showNewComponent, setShowNewComponent] = useState(false);
 
