@@ -1,6 +1,4 @@
 import React from 'react';
-import {createRoot} from 'react-dom/client';
-import logo from './logo.svg';
 import './App.css';
 import "./Homepage.css";
 import {Link} from 'react-router-dom';
@@ -12,11 +10,11 @@ function Homepage() {
   <>
     <header>
       <div>
-        <img className="logo" src={FR5_logo}/>
+        <img className="logo" src={FR5_logo} alt="Future Ready Five Logo"/>
       </div>
       <div>
-        <button href="https://futurereadyfive.org/">Website</button>
-        <button>Create Account</button>
+        <a href="https://futurereadyfive.org/"><button className="button">Future Ready Five Website</button></a>
+        <button className="button">Create Account</button>
       </div>
     </header>
     <div className="homepage">
@@ -27,20 +25,20 @@ function Homepage() {
         <h1>Organizations</h1>
       </div>
       <div className="logins">
-        <img className='parent-login' src={profile_image}/>
-        <img className='guide-login' src={profile_image}/>
-        <img className='organization-login' src={profile_image}/>
+        <img className='parent-login' src={profile_image} alt="Profile"/>
+        <img className='guide-login' src={profile_image} alt="Profile"/>
+        <img className='organization-login' src={profile_image} alt="Profile"/>
       </div>
       {/* Routes each login to the Login component */}
       <div className= "logins">
         <Link className="login" to="/login">
-          <button>Login</button>
+          <button className="button">Login</button>
         </Link>
         <Link className="login" to="/login">
-          <button>Login</button>
+          <button className="button">Login</button>
         </Link>
         <Link className="login" to="/login">
-          <button>Login</button>
+          <button className="button">Login</button>
         </Link>
       </div>
     </div>

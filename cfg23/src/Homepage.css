@@ -11,12 +11,21 @@ header {
   display: flex;
   justify-content: space-between;
   border-bottom: 5px solid black;
+
+  background-color: white;
 }
 
-button {
-  color: black;
-  background-color: rgb(255, 236, 236);
-  height: 72px;
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  color: rgb(0, 0, 0);
+  background-color: rgb(130, 130, 130);
+  height: 73px;
+  border: 2px solid black;
+  border-radius: 0;
 }
 
 .logins {

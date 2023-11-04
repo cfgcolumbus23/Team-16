@@ -1,0 +1,38 @@
+.scoresView {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 20px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.scoresView h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.scoresView h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.scoresSection {
+    margin-bottom: 10px;
+}
+
+.scoresSection p {
+    margin: 5px 0;
+}
+
+.scoresSection p:last-child {
+    text-align: center;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.scoresSection p:last-child:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,12 @@
+.child-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+    border: 1px solid black;
+}
+
+img {
+    width: 10%;
+    height: 10%;
+}
