@@ -86,9 +86,6 @@ function ScoresView() {
             <img id="line" src={line} alt="line" />
           </div>
           <button className="more" onClick={()=>{ alert("Score 1: 265 Excellent and ready for Kindergarten \nScore 2: 265 Excellent and ready for Kindergarten\nScore 3: 220 Below expectations\nScore 4: 240 Needs a little more improvement.");}}>More ^</button>
-          <div className="score">
-            <h3>Score: </h3>
-          </div>
         </section>
         <section className="scoresSection">
           <h3>Mathematics: {assessment.math}</h3>
@@ -97,9 +94,6 @@ function ScoresView() {
             <img id="line" src={line} alt="line" />
           </div>
           <button className="more" onClick={()=>{ alert("Score 1: 265 Excellent and ready for Kindergarten \nScore 2: 265 Excellent and ready for Kindergarten\nScore 3: 220 Below expectations\nScore 4: 240 Needs a little more improvement."); }}>More ^</button>
-          <div className="score">
-            <h3>Score: </h3>
-          </div>
         </section>
         <section className="scoresSection">
           <h3>Language Literacy: {assessment.literacy}</h3>
@@ -108,9 +102,6 @@ function ScoresView() {
             <img id="line" src={line} alt="line" />
           </div>
           <button className="more" onClick={()=>{ alert("Score 1: 265 Excellent and ready for Kindergarten \nScore 2: 265 Excellent and ready for Kindergarten\nScore 3: 220 Below expectations\nScore 4: 240 Needs a little more improvement."); }}>More ^</button>
-          <div className="score">
-            <h3>Score: </h3>
-          </div>
         </section>
         <section className="scoresSection">
           <h3>Physical Development: {assessment.physical}</h3>
@@ -119,9 +110,6 @@ function ScoresView() {
             <img id="line" src={line} alt="line" />
           </div>
           <button className="more" onClick={()=>{ alert("Score 1: 265 Excellent and ready for Kindergarten \nScore 2: 265 Excellent and ready for Kindergarten\nScore 3: 220 Below expectations\nScore 4: 240 Needs a little more improvement."); }}>More ^</button>
-          <div className="score">
-            <h3>Score: </h3>
-          </div>
         </section>
       </div>
     </div>
@@ -135,7 +123,7 @@ function LinkView() {
     <div className="linkView">
       <ul>
         <li><a href="http://localhost:8000/request_data/api/parentToChildren/1/">api/parentToChildren/1/</a></li>
-        <li><a href="http://localhost:8000/request_data/api/childToAssessmentDetails/1/">api/childToAssessmentDetails/1/</a></li>
+        <li><a href="http://localhost:8000/request_data/api/childToAssessmentDetail/1/">api/childToAssessmentDetail/1/</a></li>
         <li><a href="http://localhost:8000/request_data/api/guideToChildren/1/">api/guideToChildren/1/</a></li>
         <li><a href="http://localhost:8000/request_data/api/childToGuide/1/">api/childToGuide/1/</a></li>
         <li><a href="http://localhost:8000/request_data/api/child/1/">api/child/1/</a></li>
