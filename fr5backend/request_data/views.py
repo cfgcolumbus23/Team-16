@@ -4,7 +4,8 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework import permissions
 from .models import Parent, Child, Assessment, AssessmentDetail, Organization, Guide, Admin, Login
-from .serializers import ParentSerializer, ChildSerializer, AssessmentSerializer, AssessmentDetailSerializer#, OrganizationSerializer, GuideSerializer, AdminSerializer, LoginSerializer
+from .serializers import ParentSerializer, ChildSerializer, AssessmentSerializer, AssessmentDetailSerializer, GuideSerializer
+#, OrganizationSerializer, GuideSerializer, AdminSerializer, LoginSerializer
 
 # Create your views here.
 class ChildListApiBaseView(APIView):
@@ -59,13 +60,15 @@ class GuideInfoApiView(APIView):
 
     def get(self, request, child_id, *args, **kwargs):
 
-        child = Child.objects.get(id = child_id)
-        guide = child.guide
-        if not guide:
+        try:
+            child = Child.objects.get(id = child_id)
+        except Child.DoesNotExist:
             return Response(
                 {"res": "Object with child id does not exist"},
-                status= status.HTTP_400_BAD_REQUEST
+                status=status.HTTP_400_BAD_REQUEST
             )
+
+        guide = child.guide
 
         serializer = GuideSerializer(guide)
         return Response(serializer.data, status=status.HTTP_200_OK)

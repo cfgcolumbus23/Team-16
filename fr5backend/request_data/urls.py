@@ -4,13 +4,14 @@ from .views import (
     ChildListApiBaseView,
     ChildListApiView,
     ChildAssessmentDetailApiView,
-    ChildListFromGuideApiView
+    ChildListFromGuideApiView,
+    GuideInfoApiView,
 )
 
 urlpatterns = [
     path('api', ChildListApiBaseView.as_view()),
     path('api/parentToChildren/<int:parent_id>/', ChildListApiView.as_view()),
     path('api/childToAssessmentDetail/<int:child_id>/', ChildAssessmentDetailApiView.as_view()),
-    path('api/guideToChildren/<int:guide_id>/', ChildListFromGuideApiView.as_view())
+    path('api/guideToChildren/<int:guide_id>/', ChildListFromGuideApiView.as_view()),
     path('api/childToGuide/<int:child_id>/', GuideInfoApiView.as_view())
 ]
