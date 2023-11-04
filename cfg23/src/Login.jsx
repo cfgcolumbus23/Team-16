@@ -18,7 +18,6 @@ export default class Login extends React.Component {
   };
 
   handleLogin = () => {
-    // Add authentication here
     console.log("Username:", this.state.username);
     console.log("Password:", this.state.password);
   };

@@ -4,10 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import "./Homepage.css";
 import {Link} from 'react-router-dom';
-//import parent_image from '/Users/Shrit/Desktop/cfg/Team-16/cfg23/src/assets/parent_login_circle.jpeg';
-//import guide_image from '/Users/Shrit/Desktop/cfg/Team-16/cfg23/src/assets/guide_login_circle.jpg';
-//import org_image from '/Users/Shrit/Desktop/cfg/Team-16/cfg23/src/assets/organization_login_circle.jpg';
-import profile_image from '/Users/Shrit/Desktop/cfg/Team-16/cfg23/src/assets/profile.png';
+import profile_image from './assets/profile.png';
 
 function Homepage() {
   return (
