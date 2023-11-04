@@ -1,4 +1,4 @@
-.loginacc {
+.createAccount {
     text-align: center;
     max-width: 400px;
     margin: auto;
@@ -8,22 +8,23 @@
     background-color: #f9f9f9;
 }
 
-.loginacc h1 {
+.createAccount h2 {
     font-size: 1.5em;
     margin-bottom: 20px;
 }
 
-.loginacc .inputfields{
+.createAccount .formGroup {
     margin-bottom: 15px;
     text-align: left;
 }
-.loginacc label {
+
+.createAccount label {
     font-size: 1.2em;
     margin-bottom: 5px;
     display: block;
 }
 
-.loginacc input {
+.createAccount input {
     width: 95%;
     padding: 10px;
     font-size: 1em;
@@ -31,7 +32,7 @@
     border-radius: 4px;
 }
 
-.loginacc button {
+.createAccount button {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -41,6 +42,12 @@
     cursor: pointer;
 }
 
-.loginacc button:hover {
+.createAccount button:hover {
     background-color: #0056b3;
+}
+
+.loginLink {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
 }

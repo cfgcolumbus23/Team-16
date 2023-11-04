@@ -2,6 +2,61 @@
   text-align: center;
 }
 
+body {
+  background-color: rgb(67, 71, 71);
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 5px solid black;
+
+  background-color: white;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.link-button {
+  color: rgb(0, 0, 0);
+  background-color: rgb(130, 130, 130);
+  height: 73px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 0;
+}
+
+.link-button:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(73, 73, 73);
+  height: 73px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 0;
+  cursor: grab;
+}
+
+.button {
+  color: rgb(0, 0, 0);
+  background-color: rgb(130, 130, 130);
+  height: 73px;
+  border: 2px solid black;
+  border-radius: 0;
+  
+}
+
+.button:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(73, 73, 73);
+  height: 73px;
+  border: 2px solid black;
+  border-radius: 0;
+  cursor: grab;
+}
+
 .logins {
   display: flex;
   justify-content: space-around;
@@ -55,7 +110,7 @@
   flex-direction: row;
   justify-content: space-around;
   margin-left: 20px;
-  top: 100px;
+  top: 150px;
   width: 1500px;
 }
 
@@ -63,4 +118,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-top: -100px;
+  height: 50%;
 }

@@ -1,0 +1,21 @@
+.child-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+    border: 1px solid black;
+    position: relative;
+    max-height: inherit;
+}
+
+.parent-div {
+    height: 100%;
+    padding: 0 0 0 5px;
+    position: relative;
+    max-height: 850px;
+}
+
+img {
+    width: 10%;
+    height: 10%;
+}
