@@ -27,7 +27,7 @@ function Homepage() {
         <div className = "section_1">
           <h1>Parents</h1>
           <img className='parents' src={profile_image} alt="Profile"/>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quidem delectus assumenda asperiores at unde, dolores tempora vel temporibus ullam! Adipisci, sint. Fugit dolor ab qui laboriosam est corporis tempora.</p>
+          <p>Parents of children registered with Future Ready Five please login here!</p>
           <Link className="login" to="/LoginParent">
             <button className="button2">Login</button>
         </Link>
@@ -35,16 +35,16 @@ function Homepage() {
         <div className = "section_2">
           <h1>Guides</h1>
           <img className='guides' src={profile_image} alt="Profile"/>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi tempora esse quaerat ipsa consequatur facere veniam optio vel neque natus sapiente, excepturi iusto voluptatem, odit sint cumque expedita iste aspernatur.</p>
-          <Link className="login" to="/LoginGuide">
+          <p>Intervention guides registered with Future Ready Five please login here!</p>          
+        <Link className="login" to="/LoginGuide">
             <button className="button2">Login</button>
         </Link>
         </div>
         <div className = "section_3">
           <h1>Organizations</h1>
           <img className='organizations' src={profile_image} alt="Profile"/>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum quis est, consequatur unde quia atque nemo deleniti neque reprehenderit recusandae vero tempore, quaerat dignissimos distinctio alias mollitia aperiam iusto quos!</p>
-          <Link className="login" to="/LoginOrg">
+          <p>Intervention organizations registered with Future Ready Five please login here!</p>          
+        <Link className="login" to="/LoginOrg">
             <button className="button2">Login</button>
         </Link>
         </div>

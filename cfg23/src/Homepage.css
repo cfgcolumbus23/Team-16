@@ -206,7 +206,7 @@ body {
 
 /* Change the color of links on hover */
 .site-navigation a:hover {
-  background-color: ; /* Light grey background on hover */
+  background-color: lightgrey; /* Light grey background on hover */
   color: gray; /* Black text on hover */
   border-radius: 5px;
 }
