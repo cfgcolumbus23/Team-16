@@ -2,10 +2,12 @@
 from django.urls import path, include
 from .views import (
     ChildListApiBaseView,
-    ChildListApiView
+    ChildListApiView,
+    ChildAssessmentDetailApiView
 )
 
 urlpatterns = [
     path('api', ChildListApiBaseView.as_view()),
-    path('api/parentToChildren/<int:parent_id>/', ChildListApiView.as_view())
+    path('api/parentToChildren/<int:parent_id>/', ChildListApiView.as_view()),
+    path('api/childToAssessmentDetail/<int:child_id>/', ChildAssessmentDetailApiView.as_view())
 ]
