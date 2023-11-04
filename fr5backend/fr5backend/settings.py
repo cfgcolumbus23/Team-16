@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     "request_data.apps.RequestDataConfig",
     "rest_framework",
     "corsheaders",
-    "core"
 ]
 
 MIDDLEWARE = [
@@ -58,9 +57,12 @@ REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": ['rest_framework.permissions.AllowAny'],
 }
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000", 
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000", 
+# ]
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = "fr5backend.urls"
 

@@ -26,7 +26,7 @@ function ChildBar() {
 
   useEffect(() => {
     // Make an Axios GET request to your Django backend's API endpoint for children
-    axios.get("http://localhost:3000/request_data/api/parentToChildren/1")
+    axios.get("http://localhost:8000/request_data/api/parentToChildren/1/?format=json")
       .then((response) => {
         setChildrenData(response.data);
       })
@@ -40,16 +40,16 @@ function ChildBar() {
       <div class="title">
         <h3 align="center">Children</h3>
       </div>
-      <div className = "rand">
-      {children.map((child, index) => (
-        <section className="childSection" key={index}>
-          <img src={child.img} alt="Profile" className="img" />
-          <p>{child.name}</p>
-          <div className="div">
-            <p>{child.info}</p>
-          </div>
-        </section>
-      ))}
+      <div className="rand">
+        {children.map((child, index) => (
+          <section className="childSection" key={index}>
+            <img src={profile_pic} alt="Profile" className="img" />
+            <p>{child.first_name} {child.last_name}</p>
+            <div className="div">
+              <p>{child.birthdate}</p>
+            </div>
+          </section>
+        ))}
       </div>
     </div>
   );
