@@ -66,3 +66,11 @@ class Login(models.Model):
     """A login has a username and a password"""
     username = models.CharField(max_length = 200)
     password = models.CharField(max_length = 200)
+
+
+class Notes(models.Model):
+    """A Notes has a child, an organization, a note, and a date"""
+    child = models.ForeignKey("Child", on_delete=models.CASCADE)
+    organization = models.ForeignKey("Organization", on_delete=models.CASCADE)
+    note = models.TextField()
+    date = models.DateField()
