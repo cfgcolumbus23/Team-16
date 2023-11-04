@@ -87,4 +87,18 @@ class ChildListFromGuideApiView(APIView):
 
         serializer = ChildSerializer(children, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+class ChildInfoFromChild(APIView):
+    def get(self, request, child_id, *args, **kwargs):
+
+        try:
+            child = Child.objects.get(id = child_id)
+        except Child.DoesNotExist:
+            return Response(
+                {"res": "Object with child id does not exist"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        serializer = ChildSerializer(child)
+        return Response(serializer.data, status=status.HTTP_200_OK)
         
