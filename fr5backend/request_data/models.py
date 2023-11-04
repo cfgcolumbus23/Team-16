@@ -9,6 +9,8 @@ class Child(models.Model):
     parent = models.ForeignKey("Parent", on_delete=models.CASCADE)
     guide = models.ForeignKey("Guide", on_delete=models.CASCADE)
 
+    assessement = models.ManyToManyField("Assessment", through="AssessmentDetail")
+
 class Assessment(models.Model):
     """An assessment has a name, a date, a child, and a guide"""
     """An assessment has many children that take it"""
@@ -18,10 +20,14 @@ class Assessment(models.Model):
 class AssessmentDetail(models.Model):
     """An assessment detail has a literacy score, a math score, a social score, a physical score"""
     """Assessment detail is the relationship between an assessment and a child"""
+    child = models.ForeignKey("Child", on_delete=models.CASCADE)
+    assessment = models.ForeignKey("Assessment", on_delete=models.CASCADE)
+
     literacy = models.FloatField()
     math = models.FloatField()
     social = models.FloatField()
     physical = models.FloatField()
+    overall = models.FloatField()
 
 class Parent(models.Model):
     """A parent has a first name, a last name, a username, a password, a email, a phone number, and an address"""
