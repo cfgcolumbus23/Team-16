@@ -1,5 +1,7 @@
 import React from "react";
-import profilePic from "../public/profilePic.jpg"
+import profilePic from "./images/profilePic.jpg";
+import "./styles/normalize.css";
+import "./styles/parent.css";
 
 // Child view section
 function ChildBar() {
@@ -97,7 +99,7 @@ function ReferralView() {
 
 export default function ParentView() {
     return (
-        <div>
+        <div className="parentView">
             <ChildBar />
             <ScoresView />
             <ProfileView />
