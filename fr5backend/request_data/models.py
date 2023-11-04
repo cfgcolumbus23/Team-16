@@ -55,3 +55,19 @@ class Organization(models.Model):
     child = models.ManyToManyField(Child)
 
 # admin
+
+class Guide(models.model):
+    """A Guide has name, a username, an email, a phone number, and a description"""
+    name = models.CharField(max_length = 200)
+    username = models.CharField(max_length = 200)
+    password = models.CharField(max_length = 200)
+    email  = models.CharField(max_length = 200)
+    phoneNumber = models.CharField(max_length = 200)
+    description = models.TextField()
+
+
+class Admin(models.model):
+    """An admin has a name, and a username"""
+    name = models.CharField(max_length = 200)
+    username = models.CharField(max_length = 200)
+    password = models.CharField(max_length = 200)
