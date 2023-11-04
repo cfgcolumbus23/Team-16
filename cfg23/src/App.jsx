@@ -12,7 +12,7 @@ export default function App() {
         <Routes>
           <Route index element={<Homepage />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/parent" element={<Parent />} />
+          <Route path="/parent" element={<ParentView />} />
         </Routes>
       </BrowserRouter>
     </>
