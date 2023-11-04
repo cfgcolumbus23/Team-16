@@ -34,5 +34,6 @@ export default function App() {
   );
 }
 
+//Renders application
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);

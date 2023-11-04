@@ -18,7 +18,7 @@ function ChildBar({ handleImageClick }) {
     { img: profile_pic, name: "Child 7 Name", info: "Information" },
     { img: profile_pic, name: "Child 8 Name", info: "Information" },
   ];
-
+ 
   const handleClick = (index) => {
     console.log(`Image clicked: ${index}`);
     handleImageClick(index);

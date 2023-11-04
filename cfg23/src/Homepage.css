@@ -9,6 +9,7 @@ body {
   background-color: lightgray;
   height: 100vh;
   font-family: "Open Sans", sans-serif;
+  overflow: hidden;
 }
 
 .homepage {
