@@ -1,6 +1,6 @@
 .newcomponent {
     font-size: 1.5em;
-    color: #000000;
+    color: #fffbfb;
     text-align: center;
     margin-right: auto;
     width: 1%;
@@ -9,3 +9,34 @@
 .scoresView button {
     margin-right: 100em;
 }
+.scoresView{
+    background-color: white;
+    width: 500px;
+ 
+}
+
+
+.parent-contact {
+    flex: 1;
+    max-width: 300px;
+    /* Adjust as needed */
+   
+    margin-top: 10px;
+    background-color: white;
+  
+    /* Adjust as needed */
+}
+.buttonsand{
+    background-color: white;
+    width: 500px;
+     padding-left: 10px;
+    margin: auto;
+}
+
+.edit{
+    margin-top: 15px;
+    padding: 10px;
+}
+
+
+
