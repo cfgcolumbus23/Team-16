@@ -2,6 +2,23 @@
   text-align: center;
 }
 
+body {
+  background-color: rgb(67, 71, 71);
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 5px solid black;
+}
+
+button {
+  color: black;
+  background-color: rgb(255, 236, 236);
+  height: 72px;
+}
+
 .logins {
   display: flex;
   justify-content: space-around;
@@ -55,7 +72,7 @@
   flex-direction: row;
   justify-content: space-around;
   margin-left: 20px;
-  top: 100px;
+  top: 150px;
   width: 1500px;
 }
 
@@ -63,4 +80,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-top: -100px;
+  height: 50%;
 }
