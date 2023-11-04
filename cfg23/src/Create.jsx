@@ -43,7 +43,7 @@ function CreateAccount() {
         <button type="submit">Submit</button>
         <p>
           Already have an account?{" "}
-          <a href="/login" className="loginLink">
+          <a href="/" className="loginLink">
             Log in
           </a>
         </p>
