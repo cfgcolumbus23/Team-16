@@ -20,12 +20,41 @@ header {
   height: 100%;
 }
 
+.link-button {
+  color: rgb(0, 0, 0);
+  background-color: rgb(130, 130, 130);
+  height: 73px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 0;
+}
+
+.link-button:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(73, 73, 73);
+  height: 73px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 0;
+  cursor: grab;
+}
+
 .button {
   color: rgb(0, 0, 0);
   background-color: rgb(130, 130, 130);
   height: 73px;
   border: 2px solid black;
   border-radius: 0;
+  
+}
+
+.button:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(73, 73, 73);
+  height: 73px;
+  border: 2px solid black;
+  border-radius: 0;
+  cursor: grab;
 }
 
 .logins {
