@@ -68,3 +68,7 @@ img:hover {
     border-color: 1 px solid lightgray;
     border-radius: 10px;
   }
+
+  .cal {
+    margin-bottom: 500px;
+  }

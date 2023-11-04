@@ -1,11 +1,30 @@
 import React, { useState, useEffect } from "react";
+import ChildBar from "./childbar";
+import NewComponent from "./newcomponent";
 import "./styles/normalize.css";
 import "./Create.css";
 import "./styles/scoresview.css";
 import "./styles/profileview.css";
 import "./styles/referralview.css";
-import profile_pic from './assets/profile.png'
+
+import profile_pic from "./assets/profile.png";
+import Attendance from "./Attendance";
 import axios from "axios";
+
+function GuideComponent() {
+  const [showNewComponent, setShowNewComponent] = useState(false);
+  const [showAttendance, setShowAttendance] = useState(false);
+
+  const handleImageClick = (index) => {
+    setShowNewComponent(true);
+    setShowAttendance(true);
+  };
+  const handleDelete = () => {
+    setShowNewComponent(false);
+    setShowAttendance(false);
+  };
+
+
 
 function ChildBar() {
   // const children = [
@@ -52,10 +71,24 @@ function ChildBar() {
   );
 }
 
-export default function ParentView() {
+
   return (
     <div className="parentView">
-      <ChildBar />
+      <ChildBar handleImageClick={handleImageClick} />
+      {showNewComponent && (
+        <>
+        <div className="new-component">
+          <NewComponent onDelete={handleDelete} />
+        </div>
+        <div className = "new-component">
+            <Attendance onDelete={handleDelete} />
+        </div>
+        </>
+      )}
     </div>
   );
+
+
 }
+
+export default GuideComponent;
