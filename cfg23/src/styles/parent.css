@@ -90,3 +90,7 @@ img:hover {
 .attendance {
   margin: auto;
 }
+
+.attendance fieldset {
+  background-color: white;
+}

@@ -10,7 +10,7 @@ function Login() {
   const handleLogin = () => {
     console.log("Username:", username);
     console.log("Password:", password);
-    navigate("/org");
+    navigate("/organizer");
   };
   return (
     <div className="loginacc">
