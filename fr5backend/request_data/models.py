@@ -50,7 +50,7 @@ class Organization(models.Model):
     description = models.CharField(max_length=500)
     child = models.ManyToManyField(Child)
 
-class Guide(models.model):
+class Guide(models.Model):
     """A guide has a first name, a last name, a username, a password, an email, a phone number, and a description"""
     """A guide has many children and many assessments"""
     first_name = models.CharField(max_length=30)
@@ -61,7 +61,7 @@ class Guide(models.model):
     phone_number = models.CharField(max_length = 200)
     description = models.TextField()
 
-class Admin(models.model):
+class Admin(models.Model):
     """An admin has a username and a password"""
     username = models.CharField(max_length = 200)
     password = models.CharField(max_length = 200)
