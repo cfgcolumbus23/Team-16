@@ -15,7 +15,12 @@ h3 {
     margin-bottom: 0.69em;
 }
 
-
+.title {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+}
 
 .childBar {
     flex: 0 0 250px;
@@ -56,6 +61,7 @@ h3 {
 
   img:hover {
     opacity: 1.0;
+    cursor: pointer;
   }
 
   .div {
