@@ -1,13 +1,11 @@
 .newcomponent {
-    text-align: center;
-    padding: 20px;
-    margin-left: 10px;
-}
-
-.newcomponent p {
     font-size: 1.5em;
-    color: #007bff;
+    color: #000000;
     text-align: center;
     margin-right: auto;
-    width: 100%;
+    width: 1%;
+}
+
+.scoresView button {
+    margin-right: 100em;
 }
