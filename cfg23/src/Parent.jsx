@@ -1,5 +1,5 @@
 import React from "react";
-import profilePic from "./images/profilePic.jpg";
+import profilePic from "./assets/profilePic.jpg";
 import "./styles/normalize.css";
 import "./styles/parent.css";
 
