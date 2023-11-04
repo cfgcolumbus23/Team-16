@@ -1,17 +1,109 @@
 [
     {
-        "model": "search.department",
+        "model": "Child",
         "pk": 1,
         "fields": {
-            "name": "Academic Affairs",
-            "short_name": "ACADAFF"
+            "first_name": "Pete",
+            "last_name": "Smith",
+            "birthdate": "2010-01-01",
+            "parent": 1,
+            "guide": 1
+        }
+    },
+    {
+        "model": "AssessmentDetail",
+        "pk": 1,
+        "fields": {
+            "literacy": 271,
+            "math": 267.3,
+            "social": 268,
+            "physical": 269,
+            "overall": 268.1,
+            "child": 1,
+            "assessment": 1
+        }
+    },
+    {
+        "model": "Assessment",
+        "pk": 1,
+        "fields": {
+            "date": "2015-01-01",
+            "age_group": 3.5
+        }
+    },
+    {
+        "model": "Parent",
+        "pk": 1,
+        "fields": {
+            "first_name": "Mary",
+            "last_name": "Smith",
+            "email": "mary_smith@gmail.com",
+            "phone_number": "6145629072",
+            "address": "567 Woddbine Ave, Columbus, OH 43215"
+        }
+    },
+    {
+        "model": "Organization",
+        "pk": 1,
+        "fields": {
+            "name": "Columbus Library",
+            "email": "columbus_library@gmail.com",
+            "phone_number": "8409122021",
+            "address": "782 Rosewood Ave, Columbus, OH 43215",
+            "description": "The Columbus Library provides a variety of services to the community."
+        }
+    },
+    {
+        "model": "Guide",
+        "pk": 1,
+        "fields": {
+            "first_name": "Julie",
+            "last_name": "Martin",
+            "email": "julie@gmail.com",
+            "phone_number": "8923020127",
+            "description": "Julie is a certified intervention guide with 10 years of experience."
+        }
+    },
+    {
+        "model": "Notes",
+        "pk": 1,
+        "fields": {
+            "child": 1,
+            "organization": 1,
+            "note": "Pete is surely progressing in his reading skills.",
+            "date": "2022-01-01"
+        }
+    },
+    {
+        "model": "Login",
+        "pk": 1,
+        "fields": {
+            "username": "admin_username",
+            "password": "admin_password"
+        }
+    },
+    {
+        "model": "Login",
+        "pk": 2,
+        "fields": {
+            "username": "parent_username",
+            "password": "parent_password"
+        }
+    },
+    {
+        "model": "Login",
+        "pk": 3,
+        "fields": {
+            "username": "guide_username",
+            "password": "guide_password"
+        }
+    },
+    {
+        "model": "Login",
+        "pk": 4,
+        "fields": {
+            "username": "organization_username",
+            "password": "organization_password"
         }
     }
-
-
-
-
-
-
-
 ]
