@@ -8,7 +8,9 @@ import "./styles/referralview.css";
 import profile_pic from './assets/profile.png';
 import bar from './assets/color_bar.png';
 import line from './assets/line.png';
+import Attendance from "./Attendance";
 
+// ChildBar
 function ChildBar() {
   const children = [
     { img: profile_pic, name: 'Child 1 Name', info: 'Information' },
@@ -40,6 +42,7 @@ function ChildBar() {
   );
 }
 
+// View the scores of the child
 function ScoresView() {
   return (
     <div className="scoresView">
@@ -141,12 +144,48 @@ function ReferralView() {
   );
 }
 
+// Compiles all parts into a complete deliverable
 export default function ParentView() {
   return (
     <div className="parentView">
       <ChildBar />
       <ScoresView />
-      <div className="parentContainer">
+      {/* Attendance module, custom with disabled boxes */}
+      <div className="attendance">
+            <fieldset>
+            <legend>Which days did this child attend?</legend>
+            <div className="dayCheckbox">
+                <input type="checkbox" name="monday" disabled="" checked="true"></input>
+                <label for="monday">Monday</label>
+            </div>
+            <div className="dayCheckbox">
+                <input type="checkbox" name="tuesday" disabled=""></input>
+                <label for="tuesday">Tuesday</label>
+            </div>
+            <div className="dayCheckbox">
+                <input type="checkbox" name="wednesday" disabled=""></input>
+                <label for="wednesday">Wednesday</label>
+            </div>
+            <div className="dayCheckbox">
+                <input type="checkbox" name="thursday" disabled="" checked="true"></input>
+                <label for="thursday">Thursday</label>
+            </div>
+            <div className="dayCheckbox">
+                <input type="checkbox" name="friday" disabled="" checked="true"></input>
+                <label for="friday">Friday</label>
+            </div>
+            <div className="dayCheckbox">
+                <input type="checkbox" name="saturday" disabled=""></input>
+                <label for="saturday">Saturday</label>
+            </div>
+            <div className="dayCheckbox">
+                <input type="checkbox" name="sunday" disabled=""></input>
+                <label for="sunday">Sunday</label>
+            </div>
+            </fieldset>
+      </div>
+      {/* Other remaining main blocks */}
+      <div>
         <ProfileView />
         <ReferralView />
       </div>
