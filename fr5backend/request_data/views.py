@@ -31,6 +31,7 @@ class ChildListApiView(APIView):
         if not children:
             return Response(
                 {"res": "Object with parent id does not exist"},
+                {"res": "Object with parent id does not exist"},
                 status=status.HTTP_400_BAD_REQUEST
             )
 
@@ -52,4 +53,19 @@ class ChildAssessmentDetailApiView(APIView):
             )
 
         serializer = AssessmentDetailSerializer(assessmentdetails, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+class GuideInfoApiView(APIView):
+
+    def get(self, request, child_id, *args, **kwargs):
+
+        child = Child.objects.get(id = child_id)
+        guide = child.guide
+        if not guide:
+            return Response(
+                {"res": "Object with child id does not exist"},
+                status= status.HTTP_400_BAD_REQUEST
+            )
+
+        serializer = GuideSerializer(guide)
         return Response(serializer.data, status=status.HTTP_200_OK)

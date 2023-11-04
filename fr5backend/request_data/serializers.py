@@ -21,3 +21,8 @@ class AssessmentDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = AssessmentDetail
         fields = "__all__"
+
+class GuideSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Guide
+        fields = "__all__"
