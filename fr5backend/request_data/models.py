@@ -14,7 +14,6 @@ class Parent(models.Model):
     phone_number = models.CharField(max_length=10)
     address = models.CharField(max_length=150)
 
-
 # intervention guide
 
 # assessment
@@ -27,5 +26,6 @@ class Organization(models.Model):
     address = models.CharField(max_length=150)
     description = models.CharField(max_length=500)
 
+    child = models.ManyToManyField(Child)
 
 # admin
