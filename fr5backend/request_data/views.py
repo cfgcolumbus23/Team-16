@@ -216,10 +216,10 @@ class GuideInfoFromGuide(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 class OrganizationInfoFromOrganization(APIView):
-    def get(self, request, organization_id, *args, **kwargs):
+    def get(self, request, org_id, *args, **kwargs):
 
         try:
-            organization = Organization.objects.get(id = organization_id)
+            organization = Organization.objects.get(id = org_id)
         except Organization.DoesNotExist:
             return Response(
                 {"res": "Object with organization id does not exist"},
@@ -241,10 +241,10 @@ class OrganizationInfoFromOrganization(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class ChildrenInfoFromOrganization(APIView):
-    def get(self, request, organization_id, *args, **kwargs):
+    def get(self, request, org_id, *args, **kwargs):
 
         try:
-            organization = Organization.objects.get(id = organization_id)
+            organization = Organization.objects.get(id = org_id)
         except Organization.DoesNotExist:
             return Response(
                 {"res": "Object with organization id does not exist"},
