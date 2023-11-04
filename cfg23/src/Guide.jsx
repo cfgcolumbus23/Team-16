@@ -1,8 +1,6 @@
 
-import React, { useState } from "react";
 import ChildBar from "./childbar";
 import NewComponent from "./newcomponent";
-
 import React, { useState, useEffect } from "react";
 
 import "./styles/normalize.css";
