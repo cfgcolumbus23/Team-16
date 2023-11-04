@@ -1,6 +1,6 @@
 [
     {
-        "model": "Child",
+        "model": "request_data.child",
         "pk": 1,
         "fields": {
             "first_name": "Pete",
@@ -11,7 +11,7 @@
         }
     },
     {
-        "model": "AssessmentDetail",
+        "model": "request_data.assessmentdetail",
         "pk": 1,
         "fields": {
             "literacy": 271,
@@ -24,7 +24,7 @@
         }
     },
     {
-        "model": "Assessment",
+        "model": "request_data.assessment",
         "pk": 1,
         "fields": {
             "date": "2015-01-01",
@@ -32,7 +32,7 @@
         }
     },
     {
-        "model": "Parent",
+        "model": "request_data.parent",
         "pk": 1,
         "fields": {
             "first_name": "Mary",
@@ -44,7 +44,7 @@
         }
     },
     {
-        "model": "Organization",
+        "model": "request_data.organization",
         "pk": 1,
         "fields": {
             "name": "Columbus Library",
@@ -56,7 +56,7 @@
         }
     },
     {
-        "model": "Guide",
+        "model": "request_data.guide",
         "pk": 1,
         "fields": {
             "first_name": "Julie",
@@ -68,7 +68,7 @@
         }
     },
     {
-        "model": "Notes",
+        "model": "request_data.notes",
         "pk": 1,
         "fields": {
             "child": 1,
@@ -78,7 +78,7 @@
         }
     },
     {
-        "model": "Login",
+        "model": "request_data.login",
         "pk": 1,
         "fields": {
             "username": "admin_username",
@@ -86,7 +86,7 @@
         }
     },
     {
-        "model": "Login",
+        "model": "request_data.login",
         "pk": 2,
         "fields": {
             "username": "parent_username",
@@ -94,7 +94,7 @@
         }
     },
     {
-        "model": "Login",
+        "model": "request_data.login",
         "pk": 3,
         "fields": {
             "username": "guide_username",
@@ -102,7 +102,7 @@
         }
     },
     {
-        "model": "Login",
+        "model": "request_data.login",
         "pk": 4,
         "fields": {
             "username": "organization_username",
