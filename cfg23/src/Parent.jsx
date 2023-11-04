@@ -57,13 +57,26 @@ function ChildBar() {
 
 // Get a quick overview of a child's scores and categorical progress
 function ScoresView() {
+
+  const [assessment, setAssessmentData] = useState([]);
+  useEffect(() => {
+    // Make an Axios GET request to your Django backend's API endpoint for children
+    axios.get("http://localhost:8000/request_data/api/childToAssessmentDetail/1/?format=json")
+      .then((response) => {
+        setAssessmentData(response.data[0]);
+      })
+      .catch((error) => {
+        console.error('Error fetching assessments:', error);
+      });
+  }, []); // The empty dependency array ensures the effect runs only once on component mount
+
   return (
     <div className="scoresView">
-      <h2>"Child 1's" Scores:</h2>
-      <h3>Overall Score: ---%</h3>
+      <h2>Scores</h2>
+      <h3>Overall Score: {assessment.overall}</h3>
       <div className="scoresContainer">
         <section className="scoresSection">
-          <h3>Category 1:</h3>
+          <h3>Social Foundations: {assessment.social}</h3>
           <img className="bar" src={bar} alt="progress-bar" />
           <div className="line">
             <img id="line" src={line} alt="line" />
@@ -71,7 +84,7 @@ function ScoresView() {
           <p>More ^</p>
         </section>
         <section className="scoresSection">
-          <h3>Category 2:</h3>
+          <h3>Mathematics: {assessment.math}</h3>
           <img className="bar" src={bar} alt="progress-bar" />
           <div className="line">
             <img id="line" src={line} alt="line" />
@@ -79,7 +92,7 @@ function ScoresView() {
           <p>More ^</p>
         </section>
         <section className="scoresSection">
-          <h3>Category 3:</h3>
+          <h3>Language Literacy: {assessment.literacy}</h3>
           <img className="bar" src={bar} alt="progress-bar" />
           <div className="line">
             <img id="line" src={line} alt="line" />
@@ -87,7 +100,7 @@ function ScoresView() {
           <p>More ^</p>
         </section>
         <section className="scoresSection">
-          <h3>Category 4:</h3>
+          <h3>Physical Development: {assessment.physical}</h3>
           <img className="bar" src={bar} alt="progress-bar" />
           <div className="line">
             <img id="line" src={line} alt="line" />
@@ -102,43 +115,53 @@ function ScoresView() {
 
 // View the profile of the intervention guide
 function ProfileView() {
+
+  const [guide, setGuideData] = useState({});
+  useEffect(() => {
+    // Make an Axios GET request to your Django backend's API endpoint for children
+    axios.get("http://localhost:8000/request_data/api/childToGuide/1/?format=json")
+      .then((response) => {
+        setGuideData(response.data);
+      })
+      .catch((error) => {
+        console.error('Error fetching guides:', error);
+      });
+  }, []); // The empty dependency array ensures the effect runs only once on component mount
+
   return (
     <div className="profileView">
       <img src={profilePic} alt="Profile Pic"></img>
-      <p>Name: Guide 1</p>
-      <p>Contact Info: guide1@jpmc.com</p>
+      <p>{guide.first_name} {guide.last_name}</p>
+      <p>{guide.email}</p>
     </div>
   );
 }
 
 // View the programs and organizations the guide has recommended
 function ReferralView() {
+
   return (
     <div className="referralView">
       <div className="referralContainer">
         <section className="referralSection">
-          <h3>Category 1 Referrals:</h3>
-          <p>Group a</p>
-          <p>Group b</p>
-          <p>Group c</p>
+          <h3>Social Foundations Referrals:</h3>
+          <p>Columbus Library</p>
+          <p>Columbus Math Center</p>
         </section>
         <section className="referralSection">
-          <h3>Category 2 Referrals:</h3>
-          <p>Group i</p>
-          <p>Group j</p>
-          <p>Group k</p>
+          <h3>Mathematics Referrals:</h3>
+          <p>Columbus Library</p>
+          <p>Columbus Math Center</p>
         </section>
         <section className="referralSection">
-          <h3>Category 3 Referrals:</h3>
-          <p>Group q</p>
-          <p>Group r</p>
-          <p>Group s</p>
+          <h3>Language Literacy Referrals:</h3>
+          <p>Columbus Library</p>
+          <p>Franklin County Center</p>
         </section>
         <section className="referralSection">
-          <h3>Category 4 Referrals:</h3>
-          <p>Group x</p>
-          <p>Group y</p>
-          <p>Group z</p>
+          <h3>Physical Development Referrals:</h3>
+          <p>Planet Fitness</p>
+          <p>Hyde Park</p>
         </section>
       </div>
     </div>
