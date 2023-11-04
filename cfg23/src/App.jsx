@@ -18,6 +18,7 @@ export default function App() {
           <Route index element={<Homepage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/parent" element={<ParentView />} />
+          <Route path="/guide" element={<Guide />}/>
         </Routes>
       </BrowserRouter>
     </>

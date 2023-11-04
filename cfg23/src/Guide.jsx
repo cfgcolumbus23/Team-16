@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom';
 import profile_pic from './assets/profile.png';
 
 export default function Guide() {
-
     const children = [
         profile_pic,
         profile_pic,
@@ -16,9 +15,7 @@ export default function Guide() {
         profile_pic,
         profile_pic,
         profile_pic,
- 
     ]
-
     // Loop through the image URLs and create <img> elements
     const output_images = () => children.map((child, index) => {
         // Create an <img> element
