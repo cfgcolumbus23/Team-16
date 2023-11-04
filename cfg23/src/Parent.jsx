@@ -1,5 +1,5 @@
 import React from "react";
-import profilePic from "./assets/profilePic.jpg";
+import profilePic from "./assets/profile.png";
 import "./styles/normalize.css";
 import "./styles/parent.css";
 import "./styles/scoresview.css";
@@ -12,15 +12,15 @@ function ChildBar() {
     <div className="childBar">
       <h3>Children</h3>
       <section className="childSection">
-        <img src={profilePic}></img>
+        <img src={profilePic} alt="Profile Pic"></img>
         <p>Child 1</p>
       </section>
       <section className="childSection">
-        <img src={profilePic}></img>
+        <img src={profilePic} alt="Profile Pic"></img>
         <p>Child 2</p>
       </section>
       <section className="childSection">
-        <img src={profilePic}></img>
+        <img src={profilePic} alt="Profile Pic"></img>
         <p>Child 3</p>
       </section>
     </div>
@@ -61,7 +61,7 @@ function ScoresView() {
 function ProfileView() {
   return (
     <div className="profileView">
-      <img src={profilePic}></img>
+      <img src={profilePic} alt="Profile Pic"></img>
       <p>Name: Guide 1</p>
       <p>Contact Info: guide1@jpmc.com</p>
     </div>
