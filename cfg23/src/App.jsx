@@ -21,14 +21,10 @@ export default function App() {
           <Route index element={<Homepage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/parent" element={<ParentView />} />
-<<<<<<< HEAD
           <Route path="/guide" element={<Guide />} />
-
-          <Route path="/organizer" element={<ParentComponent />}></Route>
-=======
-          <Route path="/guide" element={<Guide />}/>
           <Route path="/create" element={<CreateAccount />}/>
->>>>>>> dbd8f48db41f779bb7d1d0d2c090160614745df7
+          <Route path="/organizer" element={<ParentComponent />}></Route>
+
         </Routes>
       </BrowserRouter>
     </>
