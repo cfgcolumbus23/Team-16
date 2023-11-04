@@ -1,31 +1,21 @@
 import React, { useState } from "react";
-import { useState } from "react";
+import ChildBar from "./childbar";
+import NewComponent from "./newcomponent";
 import profile_pic from "./assets/profile.png";
 
-function childBar() {
-  const children = [
-    profile_pic,
-    profile_pic,
-    profile_pic,
-    profile_pic,
-    profile_pic,
-    profile_pic,
-    profile_pic,
-    profile_pic,
-    profile_pic,
-  ];
+function ParentComponent() {
+  const [showNewComponent, setShowNewComponent] = useState(false);
 
-  // Loop through the image URLs and create <img> elements
-  const output_images = () =>
-    children.map((child, index) => {
-      // Create an <img> element
-      const imageElement = <img src={child} key={index}></img>;
-      // Append the <img> element to the image container
-      return imageElement;
-    });
+  const handleImageClick = (index) => {
+    setShowNewComponent(true);
+  };
 
-  <div className="child-list">{output_images()}</div>;
+  return (
+    <div>
+      <ChildBar handleImageClick={handleImageClick} />
+      {showNewComponent && <NewComponent />}
+    </div>
+  );
 }
-function organizerView() {}
 
-export default organizerView;
+export default ParentComponent;

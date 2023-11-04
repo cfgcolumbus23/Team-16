@@ -33,13 +33,13 @@ function Homepage() {
       </div>
       {/* Routes each login to the Login component */}
       <div className= "logins">
-        <Link className="login" to="/login">
+        <Link className="login" to="/loginParent">
           <button className="link-button">Login</button>
         </Link>
-        <Link className="login" to="/login">
+        <Link className="login" to="/loginGuide">
           <button className="link-button">Login</button>
         </Link>
-        <Link className="login" to="/login">
+        <Link className="login" to="/loginOrg">
           <button className="link-button">Login</button>
         </Link>
       </div>

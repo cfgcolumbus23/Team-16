@@ -1,0 +1,19 @@
+.organizerView {
+    text-align: center;
+    padding: 20px;
+}
+
+.organizerView button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.organizerView button:hover {
+    background-color: #0056b3;
+}
