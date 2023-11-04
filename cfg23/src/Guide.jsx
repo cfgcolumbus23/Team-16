@@ -26,10 +26,14 @@ function GuideComponent() {
     <div className="parentView">
       <ChildBar handleImageClick={handleImageClick} />
       {showNewComponent && (
+        <>
         <div className="new-component">
           <NewComponent onDelete={handleDelete} />
-          <Attendance onDelete={handleDelete} />
         </div>
+        <div className = "new-component">
+            <Attendance onDelete={handleDelete} />
+        </div>
+        </>
       )}
     </div>
   );

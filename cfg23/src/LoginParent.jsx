@@ -12,6 +12,7 @@ function Login() {
     console.log("Password:", password);
     navigate("/parent");
   };
+  //Returns a login container which allows user to either login or create a new account
   return (
     <div className="loginacc">
       <h1>Parent Login</h1>

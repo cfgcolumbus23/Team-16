@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body style="z-index: 1;">
+	<ul>
+        <li>Score 1: 250</li>
+        <li>Score 2: 250</li>
+        <li>Score 3: 250</li>
+        <li>Score 4: 250</li>
+    </ul>
+  </body>
+</html>

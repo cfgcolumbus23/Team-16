@@ -27,6 +27,7 @@ function ChildBar() {
     <div className="childBar">
       <div class="title">
         <h3 align="center">Children</h3>
+        <h4 align="center">Select a Student</h4>
       </div>
       <div className = "rand">
       {children.map((child, index) => (
@@ -56,7 +57,7 @@ function ScoresView() {
           <div className="line">
             <img id="line" src={line} alt="line" />
           </div>
-          <p>More ^</p>
+          <button className="more" onClick={()=>{ alert("Score 1: 265 Excellent and ready for Kindergarten \nScore 2: 265 Excellent and ready for Kindergarten\nScore 3: 220 Below expectations\nScore 4: 240 Needs a little more improvement.");}}>More ^</button>
           <div className="score">
             <h3>Score: </h3>
           </div>
@@ -67,7 +68,7 @@ function ScoresView() {
           <div className="line">
             <img id="line" src={line} alt="line" />
           </div>
-          <p>More ^</p>
+          <button className="more" onClick={()=>{ alert("Score 1: 265 Excellent and ready for Kindergarten \nScore 2: 265 Excellent and ready for Kindergarten\nScore 3: 220 Below expectations\nScore 4: 240 Needs a little more improvement."); }}>More ^</button>
           <div className="score">
             <h3>Score: </h3>
           </div>
@@ -78,7 +79,7 @@ function ScoresView() {
           <div className="line">
             <img id="line" src={line} alt="line" />
           </div>
-          <p>More ^</p>
+          <button className="more" onClick={()=>{ alert("Score 1: 265 Excellent and ready for Kindergarten \nScore 2: 265 Excellent and ready for Kindergarten\nScore 3: 220 Below expectations\nScore 4: 240 Needs a little more improvement."); }}>More ^</button>
           <div className="score">
             <h3>Score: </h3>
           </div>
@@ -89,7 +90,7 @@ function ScoresView() {
           <div className="line">
             <img id="line" src={line} alt="line" />
           </div>
-          <p>More ^</p>
+          <button className="more" onClick={()=>{ alert("Score 1: 265 Excellent and ready for Kindergarten \nScore 2: 265 Excellent and ready for Kindergarten\nScore 3: 220 Below expectations\nScore 4: 240 Needs a little more improvement."); }}>More ^</button>
           <div className="score">
             <h3>Score: </h3>
           </div>

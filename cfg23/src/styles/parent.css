@@ -86,11 +86,17 @@ img:hover {
   width: 10px;
 }
 
+.more {
+    width: 75px;
+    margin-left: 17px;
+}
+
 /* Attendance chart styling. */
 .attendance {
   margin: auto;
 }
 
-.attendance fieldset {
-  background-color: white;
+/* Attendance chart styling. */
+.attendance {
+  margin: auto;
 }

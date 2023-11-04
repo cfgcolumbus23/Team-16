@@ -27,12 +27,14 @@ export default function App() {
           <Route path="/parent" element={<ParentView />} />
           <Route path="/guide" element={<GuideComponent />} />
           <Route path="/create" element={<CreateAccount />} />
-          <Route path="/organizer" element={<ParentComponent />}></Route>
+          <Route path="/organizer" element={<ParentComponent />} />
+          <Route path='/organizer' element={<OrganizerView />} />
         </Routes>
       </BrowserRouter>
     </>
   );
 }
 
+//Renders application
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);

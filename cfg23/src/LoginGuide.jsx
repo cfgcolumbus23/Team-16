@@ -12,6 +12,7 @@ function Login() {
     console.log("Password:", password);
     navigate("/guide");
   };
+  //Returns a login container which allows user to either login or create a new account
   return (
     <div className="loginacc">
       <h1>Guide Login</h1>
