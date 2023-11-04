@@ -232,5 +232,102 @@
             "username": "cbus_math_center",
             "password": "organization_password"
         }
+    },
+    {
+        "model": "request_data.child",
+        "pk": 4,
+        "fields": {
+            "first_name": "Benjamin",
+            "last_name": "Kolp",
+            "birthdate": "2012-11-02",
+            "parent": 2,
+            "guide": 1
+        }
+    },
+    {
+        "model": "request_data.child",
+        "pk": 5,
+        "fields": {
+            "first_name": "Ava",
+            "last_name": "Kolp",
+            "birthdate": "2014-05-02",
+            "parent": 2,
+            "guide": 1
+        }
+    },
+    {
+        "model": "request_data.child",
+        "pk": 6,
+        "fields": {
+            "first_name": "William",
+            "last_name": "Kolp",
+            "birthdate": "2015-04-06",
+            "parent": 2,
+            "guide": 1
+        }
+    },
+    {
+        "model": "request_data.child",
+        "pk": 7,
+        "fields": {
+            "first_name": "Isabella",
+            "last_name": "Kolp",
+            "birthdate": "2015-12-02",
+            "parent": 2,
+            "guide": 2
+        }
+    },
+    {
+        "model": "request_data.child",
+        "pk": 8,
+        "fields": {
+            "first_name": "Daniel",
+            "last_name": "Kolp",
+            "birthdate": "2013-04-21",
+            "parent": 2,
+            "guide": 2
+        }
+    },
+    {
+        "model": "request_data.child",
+        "pk": 9,
+        "fields": {
+            "first_name": "Emma",
+            "last_name": "Kolp",
+            "birthdate": "2012-07-18",
+            "parent": 2,
+            "guide": 2
+        }
+    },
+    {
+        "model": "request_data.child",
+        "pk": 10,
+        "fields": {
+            "first_name": "Grace",
+            "last_name": "Kolp",
+            "birthdate": "2010-08-02",
+            "parent": 2,
+            "guide": 2
+        }
+    },
+    {
+        "model": "request_data.parent",
+        "pk": 2,
+        "fields": {
+            "first_name": "Sam",
+            "last_name": "Kolp",
+            "email": "sam_kolp@gmail.com",
+            "phone_number": "8923903290",
+            "address": "312 Elm St, Columbus, OH 43215",
+            "login": 7
+        }
+    },
+    {
+        "model": "request_data.login",
+        "pk": 7,
+        "fields": {
+            "username": "sam_kolp",
+            "password": "organization_password"
+        }
     }
 ]
