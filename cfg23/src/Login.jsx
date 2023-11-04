@@ -1,54 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./login.css";
-export default class Login extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      username: "",
-      password: "",
-    };
-  }
 
-  handleUsernameChange = (e) => {
-    this.setState({ username: e.target.value });
-  };
+function Login() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  handlePasswordChange = (e) => {
-    this.setState({ password: e.target.value });
+  const handleLogin = () => {
+    console.log("Username:", username);
+    console.log("Password:", password);
+    navigate("/parent");
   };
-
-  handleLogin = () => {
-    console.log("Username:", this.state.username);
-    console.log("Password:", this.state.password);
-  };
-  render() {
-    return React.createElement(
-      "div",
-      { className: "App" },
-      React.createElement("h1", null, "Login"),
-      React.createElement(
-        "div",
-        null,
-        React.createElement("input", {
-          type: "text",
-          placeholder: "Username",
-          value: this.state.username,
-          onChange: this.handleUsernameChange,
-        })
-      ),
-      React.createElement(
-        "div",
-        null,
-        React.createElement("input", {
-          type: "password",
-          placeholder: "Password",
-          value: this.state.password,
-          onChange: this.handlePasswordChange,
-        })
-      ),
-      <a href="/parent">
-        <button onClick={this.handleLogin}>Login</button>
-      </a>
-    );
-  }
+  return (
+    <div className="loginacc">
+      <h1>Login</h1>
+      <div>
+        <div className="inputfields">
+          <label htmlFor="username">Username:</label>
+          <input
+            type="text"
+            id="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
+        <div className="inputfields">
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <button onClick={handleLogin}>Login</button>
+        <p>
+          Don't have an account?{" "}
+          <a href="/create" className="loginLink">
+            Create Account
+          </a>
+        </p>
+      </div>
+    </div>
+  );
 }
+
+export default Login;
