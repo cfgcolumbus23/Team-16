@@ -1,8 +1,10 @@
+/* Site wide styling */
 html {
     font-family: "Roboto", Helvetica, sans-serif;
 
 }
 
+/* Parent view component wide styling. */
 .parentView {
     display: flex;
 }
@@ -13,6 +15,7 @@ h3 {
     margin-bottom: 0.69em;
 }
 
+/* Child side bar styling. */
 .childBar {
     flex: 0 0 250px;
     align-items: center;
@@ -50,36 +53,40 @@ h3 {
     justify-content: center;
 }
 
-  img:hover {
-    opacity: 1.0;
-  }
+img:hover {
+  opacity: 1.0;
+}
 
-  .div {
-    flex: auto;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    background-color: white;
-    padding: 3px;
-    border-color: 1 px solid lightgray;
-    border-radius: 10px;
-  }
+.div {
+  flex: auto;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: white;
+  padding: 3px;
+  border-color: 1 px solid lightgray;
+  border-radius: 10px;
+}
 
-  .bar {
-    width: 100px;
-    height: 15px;
-  }
+.bar {
+  width: 100px;
+  height: 15px;
+}
 
-  .line {
-    height: 25px;
-    margin-top: -25px;
-    max-width: 100%
-  }
+.line {
+  height: 25px;
+  margin-top: -25px;
+  max-width: 100%
+}
 
-  #line {
-    height: 25px;
-    position: absolute;
-    margin-left: -5px;
-    width: 10px;
+#line {
+  height: 25px;
+  position: absolute;
+  margin-left: -5px;
+  width: 10px;
+}
 
-  }
+/* Attendance chart styling. */
+.attendance {
+  margin: auto;
+}
