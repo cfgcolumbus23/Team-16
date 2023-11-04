@@ -4,7 +4,6 @@ import "./Homepage.css";
 import {Link} from 'react-router-dom';
 import profile_image from './assets/profile.png';
 import FR5_logo from './assets/FR5-horizontal-logo.png';
-import Create from "./Create";
 
 function Homepage() {
   return (

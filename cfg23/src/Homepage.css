@@ -36,7 +36,7 @@ header {
   width: 100px;
   border: 2px solid black;
   border-radius: 0;
-  cursor: grab;
+  cursor: pointer;
 }
 
 .button {
@@ -54,7 +54,7 @@ header {
   height: 73px;
   border: 2px solid black;
   border-radius: 0;
-  cursor: grab;
+  cursor: pointer;
 }
 
 .logins {

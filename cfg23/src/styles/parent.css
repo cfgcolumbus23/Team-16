@@ -9,13 +9,25 @@ html {
     display: flex;
 }
 
+.parentContainer {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3%;
+    align-items: flex-start;
+}
+
 h3 {
     font-size: 1.5em;
     margin-top: 0.32em;
     margin-bottom: 0.69em;
 }
 
-
+.title {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+}
 
 .childBar {
     flex: 0 0 250px;
@@ -54,11 +66,12 @@ h3 {
     justify-content: center;
 }
 
-  img:hover {
+img:hover {
     opacity: 1.0;
+    cursor: pointer;
   }
 
-  .div {
+.div {
     flex: auto;
     align-items: center;
     align-content: center;
