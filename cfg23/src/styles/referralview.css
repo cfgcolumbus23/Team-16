@@ -1,0 +1,24 @@
+.referralView {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 300px;
+    margin: auto;
+}
+
+.referralContainer {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 150px 150px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.referralSection h3 {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
