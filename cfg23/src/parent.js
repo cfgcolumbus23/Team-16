@@ -1,6 +1,7 @@
 import React from "react";
 import profilePic from "../public/profilePic.jpg"
 
+// Child view section
 function ChildBar() {
     return (
         <div className="childBar">
@@ -21,27 +22,28 @@ function ChildBar() {
     );
 }
 
+// Get a quick overview of a child's scores and categorical progress
 function ScoresView() {
     return (
         <div className="scoresView">
             <h2>"Child 1's" Scores:</h2>
             <h3>Overall Score: ---%</h3>
-            <section className="scoreSection">
+            <section className="scoresSection">
                 <h3>Category 1:</h3>
                 <p>----+--</p>
                 <p>More ^</p>
             </section>
-            <section className="scoreSection">
+            <section className="scoresSection">
                 <h3>Category 2:</h3>
                 <p>----+--</p>
                 <p>More ^</p>
             </section>
-            <section className="scoreSection">
+            <section className="scoresSection">
                 <h3>Category 3:</h3>
                 <p>----+--</p>
                 <p>More ^</p>
             </section>
-            <section className="scoreSection">
+            <section className="scoresSection">
                 <h3>Category 4:</h3>
                 <p>----+--</p>
                 <p>More ^</p>
@@ -50,6 +52,7 @@ function ScoresView() {
     );
 }
 
+// View the profile of the intervention guide
 function ProfileView() {
     return (
         <div className="profileView">
@@ -60,6 +63,7 @@ function ProfileView() {
     );
 }
 
+// View the programs and organizations the guide has recommended
 function ReferralView() {
     return (
         <div className="referralView">
