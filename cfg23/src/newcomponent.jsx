@@ -4,10 +4,6 @@ import "./styles/parent.css";
 import line from "./assets/line.png";
 import bar from "./assets/color_bar.png";
 
-function showNotesField() {
-  document.getElementById("notesField").style.display = "block";
-}
-
 //return the child information based on which child was clicked, displaying their scores
 function NewComponent({ onDelete }) {
   //handle the event where the new component rendered wants to be deleted
@@ -54,22 +50,6 @@ function NewComponent({ onDelete }) {
         </section>
       </div>
       <p>Parent contact information:</p>
-      <form>
-        <button type="button" onclick="showNotesField()">
-          Add Note
-        </button>
-        <div id="notesField" style="display: none;">
-          <textarea
-            id="noteInput"
-            rows="4"
-            cols="50"
-            placeholder="Enter your note here..."
-          ></textarea>
-          <button type="button" onclick="saveNote()">
-            Save Note
-          </button>
-        </div>
-      </form>
     </div>
   );
 }

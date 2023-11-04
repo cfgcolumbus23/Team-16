@@ -9,7 +9,7 @@ import LoginGuide from "./LoginGuide";
 import LoginOrg from "./LoginOrg";
 import ParentView from "./Parent";
 import CreateAccount from "./Create";
-import Guide from "./Guide";
+import GuideComponent from "./Guide";
 import OrganizerView from "./organizer";
 import ParentComponent from "./organizer";
 import ChildBar from "./childbar";
@@ -25,15 +25,15 @@ export default function App() {
           <Route path="/loginGuide" element={<LoginGuide />} />
           <Route path="/loginOrg" element={<LoginOrg />} />
           <Route path="/parent" element={<ParentView />} />
-          <Route path="/guide" element={<Guide />} />
-          <Route path="/create" element={<CreateAccount />}/>
+          <Route path="/guide" element={<GuideComponent />} />
+          <Route path="/create" element={<CreateAccount />} />
           <Route path="/organizer" element={<ParentComponent />}></Route>
-
         </Routes>
       </BrowserRouter>
     </>
   );
 }
 
+//Renders application
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
