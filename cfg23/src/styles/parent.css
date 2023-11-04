@@ -1,27 +1,15 @@
-.childBar {
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+.parentView {
+    display: flex;
+}
+
+.childBar {
+    flex: 25%;
 }
 
 .childSection {
 
-}
-
-.scoresView {
-
-}
-
-.scoresSection {
-
-}
-
-.profileView {
-
-}
-
-.referralView {
-
-}
-
-.referralSection {
-    
 }
