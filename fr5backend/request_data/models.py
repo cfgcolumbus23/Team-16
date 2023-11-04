@@ -46,6 +46,7 @@ class Organization(models.Model):
     address = models.CharField(max_length=150)
     description = models.CharField(max_length=500)
     child = models.ManyToManyField(Child)
+    login = models.OneToOneField("Login", on_delete=models.CASCADE)
 
 class Guide(models.Model):
     """A guide has a first name, a last name, an email, a phone number, and a description"""
