@@ -1,0 +1,17 @@
+[
+    {
+        "model": "search.department",
+        "pk": 1,
+        "fields": {
+            "name": "Academic Affairs",
+            "short_name": "ACADAFF"
+        }
+    }
+
+
+
+
+
+
+
+]
