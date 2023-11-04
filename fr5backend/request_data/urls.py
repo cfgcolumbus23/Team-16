@@ -1,4 +1,6 @@
 # from django.conf.urls import url
+
+#This file contains the urls paths for the APIs.
 from django.urls import path, include
 from .views import (
     ChildListApiBaseView,

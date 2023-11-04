@@ -8,6 +8,8 @@ from .serializers import ParentSerializer, ChildSerializer, AssessmentSerializer
 #, OrganizationSerializer, GuideSerializer, AdminSerializer, LoginSerializer
 
 # Create your views here.
+
+#This file is defined to map the data to the APIs based on the specific user/entity.
 class ChildListApiBaseView(APIView):
     # permission_classes = [permissions.IsAuthenticated]
 

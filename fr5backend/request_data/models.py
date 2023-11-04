@@ -1,5 +1,6 @@
 from django.db import models
 
+#This file defines all the models and relations between each entity.
 class Child(models.Model):
     """A child has a first name, a last name, a birthdate, a parent, and a guide"""
     """A child has many assessments and many organizations"""

@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Parent, Child, Assessment, AssessmentDetail, Organization, Guide, Admin, Login
 
+#This file contains the classes for all the serialized entities and specifies the fields that are to be seen.
 class ParentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Parent
