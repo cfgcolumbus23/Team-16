@@ -1,14 +1,9 @@
 import React from "react";
 
-function Attendance ({ onDelete }) {
-    //handle the event where the new component rendered wants to be deleted
-    const handleDelete = () => {
-        onDelete();
-    };
-
+// Attendance component to track child's participation
+function Attendance () {
     return (
-        <div>
-            <button onClick={handleDelete}>X</button>
+        <div className="attendance">
             <fieldset>
             <legend>Which days did this child attend?</legend>
             <div className="dayCheckbox">
@@ -43,3 +38,5 @@ function Attendance ({ onDelete }) {
         </div>
     );
 }
+
+export default Attendance;
