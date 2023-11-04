@@ -14,7 +14,7 @@ function Login() {
   };
   return (
     <div className="loginacc">
-      <h1>Login</h1>
+      <h1>Parent Login</h1>
       <div>
         <div className="inputfields">
           <label htmlFor="username">Username:</label>
