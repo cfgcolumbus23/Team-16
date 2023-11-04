@@ -1,0 +1,16 @@
+.linkView {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    
+}
+
+.linkView a {
+    border: 1px black;
+}
+
+.spacer {
+    margin-bottom: 10%;
+}
