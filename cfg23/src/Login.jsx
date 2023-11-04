@@ -18,7 +18,6 @@ export default class Login extends React.Component {
   };
 
   handleLogin = () => {
-    // Add authentication here
     console.log("Username:", this.state.username);
     console.log("Password:", this.state.password);
   };
@@ -47,7 +46,9 @@ export default class Login extends React.Component {
           onChange: this.handlePasswordChange,
         })
       ),
-      React.createElement("button", { onClick: this.handleLogin }, "Login")
+      <a href="/parent">
+        <button onClick={this.handleLogin}>Login</button>
+      </a>
     );
   }
 }

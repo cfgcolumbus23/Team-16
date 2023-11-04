@@ -1,0 +1,18 @@
+.referralView {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+    background-color: #f9f9f9;
+}
+
+.referralSection {
+    margin-bottom: 20px;
+}
+
+.referralSection p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
