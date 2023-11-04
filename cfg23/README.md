@@ -1,9 +1,7 @@
-<h1 align="center">Welcome to Code For Good 2023 Columbus - Team 16 👋</h1>
+<h1 align="center">Welcome to Code For Good 2023 Columbus, OH - Team 16 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
 </p>
-
-> 24 Hour Hackathon Project created by Team 16 at the JPMC Code For Good Event in Columbus, OH
 
 ## Install
 
