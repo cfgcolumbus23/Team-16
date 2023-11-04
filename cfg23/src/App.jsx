@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./Homepage";
 import Login from "./Login";
 import ParentView from "./Parent";
+import CreateAccount from "./create";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
           <Route index element={<Homepage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/parent" element={<ParentView />} />
+          <Route path="/create" element={<CreateAccount />} />
         </Routes>
       </BrowserRouter>
     </>
