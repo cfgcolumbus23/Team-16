@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 class Child(models.Model):
     """A child has a name, a birthdate, a parent, and a guide"""
     """A child has many assessments and many organizations"""
@@ -23,10 +22,6 @@ class AssessmentDetail(models.Model):
     social = models.FloatField()
     physical = models.FloatField()
 
-
-# child
-
-# parent
 class Parent(models.Model):
     """A parent has a first name, a last name, a username, a password, a email, a phone number, and an address"""
     """A parent has many children"""
@@ -38,11 +33,6 @@ class Parent(models.Model):
     phone_number = models.CharField(max_length=10)
     address = models.CharField(max_length=150)
 
-# intervention guide
-
-# assessment
-
-# organization
 class Organization(models.Model):
     """An organization has a name, a email, a username, a phone number, an address, and a description"""
     """An organization has many many children"""
@@ -54,20 +44,18 @@ class Organization(models.Model):
 
     child = models.ManyToManyField(Child)
 
-# admin
-
 class Guide(models.model):
-    """A Guide has name, a username, an email, a phone number, and a description"""
-    name = models.CharField(max_length = 200)
+    """A guide has a first name, a last name, a username, a password, an email, a phone number, and a description"""
+    """A guide has many children and many assessments"""
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
     username = models.CharField(max_length = 200)
     password = models.CharField(max_length = 200)
     email  = models.CharField(max_length = 200)
-    phoneNumber = models.CharField(max_length = 200)
+    phone_number = models.CharField(max_length = 200)
     description = models.TextField()
 
-
 class Admin(models.model):
-    """An admin has a name, and a username"""
-    name = models.CharField(max_length = 200)
+    """An admin has a username and a password"""
     username = models.CharField(max_length = 200)
     password = models.CharField(max_length = 200)
