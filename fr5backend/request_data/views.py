@@ -69,3 +69,19 @@ class GuideInfoApiView(APIView):
 
         serializer = GuideSerializer(guide)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+class ChildListFromGuideApiView(APIView):
+    def get(self, request, guide_id, *args, **kwargs):
+        '''
+        Retrieves the children basic info with given guide_id
+        '''
+        children = Child.objects.filter(guide = guide_id)
+        if not children:
+            return Response(
+                {"res": "Object with guide id does not exist"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        serializer = ChildSerializer(children, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+        
