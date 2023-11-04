@@ -4,8 +4,8 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework import permissions
 from .models import Parent, Child, Assessment, AssessmentDetail, Organization, Guide, Admin, Login
-from .serializers import ParentSerializer, ChildSerializer, AssessmentSerializer, AssessmentDetailSerializer, GuideSerializer
-#, OrganizationSerializer, GuideSerializer, AdminSerializer, LoginSerializer
+from .serializers import ParentSerializer, ChildSerializer, AssessmentSerializer, AssessmentDetailSerializer, GuideSerializer, OrganizationSerializer
+# , GuideSerializer, AdminSerializer, LoginSerializer
 
 # Create your views here.
 
@@ -102,5 +102,23 @@ class ChildInfoFromChild(APIView):
             )
 
         serializer = ChildSerializer(child)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
+
+class OrganizationInfoFromChild(APIView):
+    def get(self, request, child_id, *args, **kwargs):
+
+        try:
+            child = Child.objects.get(id = child_id)
+        except Child.DoesNotExist:
+            return Response(
+                {"res": "Object with child id does not exist"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        # child and organization have a many to many relationship
+        organizations = child.organizations.all()
+
+        serializer = OrganizationSerializer(organizations, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
         

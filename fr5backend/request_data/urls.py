@@ -8,7 +8,8 @@ from .views import (
     ChildAssessmentDetailApiView,
     ChildListFromGuideApiView,
     GuideInfoApiView,
-    ChildInfoFromChild
+    ChildInfoFromChild,
+    OrganizationInfoFromChild
 )
 
 urlpatterns = [
@@ -17,5 +18,6 @@ urlpatterns = [
     path('api/childToAssessmentDetail/<int:child_id>/', ChildAssessmentDetailApiView.as_view()),
     path('api/guideToChildren/<int:guide_id>/', ChildListFromGuideApiView.as_view()),
     path('api/childToGuide/<int:child_id>/', GuideInfoApiView.as_view()),
-    path('api/child/<int:child_id>/', ChildInfoFromChild.as_view())
+    path('api/child/<int:child_id>/', ChildInfoFromChild.as_view()),
+    path('api/childToOrganizations/<int:child_id>/', OrganizationInfoFromChild.as_view()),
 ]
