@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import profilePic from "./assets/profile.png";
 import "./styles/normalize.css";
 import "./styles/parent.css";
@@ -10,16 +11,30 @@ import bar from './assets/color_bar.png';
 import line from './assets/line.png';
 
 function ChildBar() {
-  const children = [
-    { img: profile_pic, name: 'Child 1 Name', info: 'Information' },
-    { img: profile_pic, name: 'Child 2 Name', info: 'Information' },
-    { img: profile_pic, name: 'Child 3 Name', info: 'Information' },
-    { img: profile_pic, name: 'Child 4 Name', info: 'Information' },
-    { img: profile_pic, name: 'Child 5 Name', info: 'Information' },
-    { img: profile_pic, name: 'Child 6 Name', info: 'Information' },
-    // { img: profile_pic, name: 'Child 7 Name', info: 'Information' },
-    // { img: profile_pic, name: 'Child 8 Name', info: 'Information' },
-  ];
+  // const children = [
+  //   { img: profile_pic, name: 'Child 1 Name', info: 'Information' },
+  //   { img: profile_pic, name: 'Child 2 Name', info: 'Information' },
+  //   { img: profile_pic, name: 'Child 3 Name', info: 'Information' },
+  //   { img: profile_pic, name: 'Child 4 Name', info: 'Information' },
+  //   { img: profile_pic, name: 'Child 5 Name', info: 'Information' },
+  //   { img: profile_pic, name: 'Child 6 Name', info: 'Information' },
+  //   // { img: profile_pic, name: 'Child 7 Name', info: 'Information' },
+  //   // { img: profile_pic, name: 'Child 8 Name', info: 'Information' },
+  // ];
+
+  const [children, setChildrenData] = useState([]);
+
+  useEffect(() => {
+    // Make an Axios GET request to your Django backend's API endpoint for children
+    axios.get("http://localhost:3000/request_data/api/parentToChildren/1")
+      .then((response) => {
+        setChildrenData(response.data);
+      })
+      .catch((error) => {
+        console.error('Error fetching children:', error);
+      });
+  }, []); // The empty dependency array ensures the effect runs only once on component mount
+
   return (
     <div className="childBar">
       <div class="title">
