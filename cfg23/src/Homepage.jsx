@@ -14,7 +14,9 @@ function Homepage() {
       </div>
       <div>
         <a href="https://futurereadyfive.org/"><button className="button">Future Ready Five Website</button></a>
-        <button className="button">Create Account</button>
+        <Link to="/Create">
+          <button className="button">Create Account</button>
+        </Link>
       </div>
     </header>
     <div className="homepage">
@@ -32,13 +34,13 @@ function Homepage() {
       {/* Routes each login to the Login component */}
       <div className= "logins">
         <Link className="login" to="/login">
-          <button className="button">Login</button>
+          <button className="link-button">Login</button>
         </Link>
         <Link className="login" to="/login">
-          <button className="button">Login</button>
+          <button className="link-button">Login</button>
         </Link>
         <Link className="login" to="/login">
-          <button className="button">Login</button>
+          <button className="link-button">Login</button>
         </Link>
       </div>
     </div>

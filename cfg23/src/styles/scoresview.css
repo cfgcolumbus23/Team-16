@@ -1,26 +1,36 @@
 .scoresView {
     background-color: #f9f9f9;
     padding: 20px;
+    text-align: center;
     border: 1px solid #ccc;
     border-radius: 8px;
-    margin: 20px;
-    max-width: 400px;
     margin: auto;
+    width: 450px;
+    height: 450px;
+}
+
+.scoresContainer {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 150px 150px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: center;
 }
 
 .scoresView h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    text-align: center;
 }
 
 .scoresView h3 {
     font-size: 1.2em;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .scoresSection {
-    margin-bottom: 10px;
+    background-color: rgb(102, 102, 102);
+    padding: 20px;
 }
 
 .scoresSection p {
@@ -28,7 +38,6 @@
 }
 
 .scoresSection p:last-child {
-    text-align: center;
     cursor: pointer;
     color: #007bff;
 }
