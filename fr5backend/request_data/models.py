@@ -8,7 +8,7 @@ class Child(models.Model):
     birthdate = models.DateField()
     parent = models.ForeignKey("Parent", on_delete=models.CASCADE)
     guide = models.ForeignKey("Guide", on_delete=models.CASCADE)
-    assessement = models.ManyToManyField("Assessment", through="AssessmentDetail")
+    assessment = models.ManyToManyField("Assessment", through="AssessmentDetail")
 
 class Assessment(models.Model):
     """An assessment has a name, a date, a child, and a guide"""
