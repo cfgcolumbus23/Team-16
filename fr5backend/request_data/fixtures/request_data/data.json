@@ -108,5 +108,115 @@
             "username": "organization_username",
             "password": "organization_password"
         }
+    },
+    {
+        "model": "request_data.child",
+        "pk": 2,
+        "fields": {
+            "first_name": "Jenny",
+            "last_name": "Klein",
+            "birthdate": "2012-04-02",
+            "parent": 2,
+            "guide": 2
+        }
+    },
+    {
+        "model": "request_data.assessmentdetail",
+        "pk": 2,
+        "fields": {
+            "literacy": 287,
+            "math": 288,
+            "social": 250,
+            "physical": 254,
+            "overall": 269.1,
+            "child": 2,
+            "assessment": 2
+        }
+    },
+    {
+        "model": "request_data.assessment",
+        "pk": 2,
+        "fields": {
+            "date": "2016-01-01",
+            "age_group": 2
+        }
+    },
+    {
+        "model": "request_data.parent",
+        "pk": 2,
+        "fields": {
+            "first_name": "Sara",
+            "last_name": "Klein",
+            "email": "sara_klein@gmail.com",
+            "phone_number": "9021920129",
+            "address": "7821 Lane Ave, Columbus, OH 43215",
+            "login": 6
+        }
+    },
+    {
+        "model": "request_data.organization",
+        "pk": 2,
+        "fields": {
+            "name": "Columbus Math Center",
+            "email": "columbus_math_center@gmail.com",
+            "phone_number": "9022192665",
+            "address": "94 Tamarack Ave, Columbus, OH 43215",
+            "description": "The Columbus Math Center provides a variety of services to the community.",
+            "login": 8
+        }
+    },
+    {
+        "model": "request_data.guide",
+        "pk": 2,
+        "fields": {
+            "first_name": "Ellie",
+            "last_name": "Scott",
+            "email": "ellie@gmail.com",
+            "phone_number": "9526627898",
+            "description": "Ellie is a certified intervention guide with 7 years of experience.",
+            "login": 7
+        }
+    },
+    {
+        "model": "request_data.notes",
+        "pk": 2,
+        "fields": {
+            "child": 2,
+            "organization": 2,
+            "note": "Jenny is not progressing in his math skills.",
+            "date": "2022-01-01"
+        }
+    },
+    {
+        "model": "request_data.login",
+        "pk": 5,
+        "fields": {
+            "username": "admin_username",
+            "password": "admin_password"
+        }
+    },
+    {
+        "model": "request_data.login",
+        "pk": 6,
+        "fields": {
+            "username": "parent_username",
+            "password": "parent_password"
+        }
+    },
+    {
+        "model": "request_data.login",
+        "pk": 7,
+        "fields": {
+            "username": "guide_username",
+            "password": "guide_password"
+        }
+    },
+    {
+        "model": "request_data.login",
+        "pk": 8,
+        "fields": {
+            "username": "organization_username",
+            "password": "organization_password"
+        }
     }
 ]
