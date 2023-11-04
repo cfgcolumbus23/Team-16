@@ -7,7 +7,6 @@
 html,
 body {
   background-color: lightgray;
-  background-image: url("/src/assets/pexels-gdtography-911738.jpg");
   height: 100vh;
   font-family: "Open Sans", sans-serif;
 }
@@ -222,6 +221,7 @@ body {
 .button2:hover {
   color: #ffffff;
   border: 1px solid #00FFAA;
+  cursor: pointer;
 }
 
 .button2:hover:before {
