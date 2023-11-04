@@ -22,7 +22,7 @@ function ChildBar() {
   ];
   return (
     <div className="childBar">
-      <div className="title">
+      <div class="title">
         <h3 align="center">Children</h3>
       </div>
       <div className = "rand">
