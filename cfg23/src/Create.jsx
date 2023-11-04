@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./Create.css";
+import { useNavigate } from "react-router-dom";
 
 function CreateAccount() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -16,6 +18,7 @@ function CreateAccount() {
     e.preventDefault();
     console.log("Username:", username);
     console.log("Password:", password);
+    navigate("/");
   };
 
   return (
@@ -43,7 +46,7 @@ function CreateAccount() {
         <button type="submit">Submit</button>
         <p>
           Already have an account?{" "}
-          <a href="/login" className="loginLink">
+          <a href="/" className="loginLink">
             Log in
           </a>
         </p>
