@@ -1,5 +1,10 @@
-.childBar {
+.parentView {
 
+}
+
+.childBar {
+    width: 25%;
+    display: flex;
 }
 
 .childSection {
@@ -25,3 +30,4 @@
 .referralSection {
     
 }
+
