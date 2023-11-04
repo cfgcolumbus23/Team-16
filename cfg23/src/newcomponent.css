@@ -1,0 +1,13 @@
+.newcomponent {
+    text-align: center;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+.newcomponent p {
+    font-size: 1.5em;
+    color: #007bff;
+    text-align: center;
+    margin-right: auto;
+    width: 100%;
+}

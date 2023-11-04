@@ -4,7 +4,6 @@ import "./Homepage.css";
 import {Link} from 'react-router-dom';
 import profile_image from './assets/profile.png';
 import FR5_logo from './assets/FR5-horizontal-logo.png';
-import Create from "./Create";
 
 function Homepage() {
   return (
@@ -34,13 +33,13 @@ function Homepage() {
       </div>
       {/* Routes each login to the Login component */}
       <div className= "logins">
-        <Link className="login" to="/login">
+        <Link className="login" to="/loginParent">
           <button className="link-button">Login</button>
         </Link>
-        <Link className="login" to="/login">
+        <Link className="login" to="/loginGuide">
           <button className="link-button">Login</button>
         </Link>
-        <Link className="login" to="/login">
+        <Link className="login" to="/loginOrg">
           <button className="link-button">Login</button>
         </Link>
       </div>
