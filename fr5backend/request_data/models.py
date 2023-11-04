@@ -1,7 +1,7 @@
 from django.db import models
 
 class Child(models.Model):
-    """A child has a name, a birthdate, a parent, and a guide"""
+    """A child has a first name, a last name, a birthdate, a parent, and a guide"""
     """A child has many assessments and many organizations"""
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
@@ -11,12 +11,13 @@ class Child(models.Model):
 
 class Assessment(models.Model):
     """An assessment has a name, a date, a child, and a guide"""
-    """An assessment has many questions"""
+    """An assessment has many children that take it"""
     date = models.DateField()
     age_group = models.FloatField()
 
 class AssessmentDetail(models.Model):
-    """An assessment has """
+    """An assessment detail has a literacy score, a math score, a social score, a physical score"""
+    """Assessment detail is the relationship between an assessment and a child"""
     literacy = models.FloatField()
     math = models.FloatField()
     social = models.FloatField()
@@ -41,7 +42,6 @@ class Organization(models.Model):
     phone_number = models.CharField(max_length=10)
     address = models.CharField(max_length=150)
     description = models.CharField(max_length=500)
-
     child = models.ManyToManyField(Child)
 
 class Guide(models.model):
