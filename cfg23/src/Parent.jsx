@@ -5,7 +5,9 @@ import "./styles/parent.css";
 import "./styles/scoresview.css";
 import "./styles/profileview.css";
 import "./styles/referralview.css";
-import profile_pic from './assets/profile.png'
+import profile_pic from './assets/profile.png';
+import bar from './assets/color_bar.png';
+import line from './assets/line.png';
 
 function ChildBar() {
   const children = [
@@ -47,22 +49,34 @@ function ScoresView() {
       <div className="scoresContainer">
         <section className="scoresSection">
           <h3>Category 1:</h3>
-          <p>----+--</p>
+          <img className="bar" src={bar} alt="progress-bar" />
+          <div className="line">
+            <img id="line" src={line} alt="line" />
+          </div>
           <p>More ^</p>
         </section>
         <section className="scoresSection">
           <h3>Category 2:</h3>
-          <p>----+--</p>
+          <img className="bar" src={bar} alt="progress-bar" />
+          <div className="line">
+            <img id="line" src={line} alt="line" />
+          </div>
           <p>More ^</p>
         </section>
         <section className="scoresSection">
           <h3>Category 3:</h3>
-          <p>----+--</p>
+          <img className="bar" src={bar} alt="progress-bar" />
+          <div className="line">
+            <img id="line" src={line} alt="line" />
+          </div>
           <p>More ^</p>
         </section>
         <section className="scoresSection">
           <h3>Category 4:</h3>
-          <p>----+--</p>
+          <img className="bar" src={bar} alt="progress-bar" />
+          <div className="line">
+            <img id="line" src={line} alt="line" />
+          </div>
           <p>More ^</p>
         </section>
       </div>
