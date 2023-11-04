@@ -121,4 +121,47 @@ class OrganizationInfoFromChild(APIView):
 
         serializer = OrganizationSerializer(organizations, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
-        
+
+class GuideInfoFromGuide(APIView):
+    def get(self, request, guide_id, *args, **kwargs):
+
+        try:
+            guide = Guide.objects.get(id = guide_id)
+        except Guide.DoesNotExist:
+            return Response(
+                {"res": "Object with guide id does not exist"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        serializer = GuideSerializer(guide)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
+class OrganizationInfoFromOrganization(APIView):
+    def get(self, request, organization_id, *args, **kwargs):
+
+        try:
+            organization = Organization.objects.get(id = organization_id)
+        except Organization.DoesNotExist:
+            return Response(
+                {"res": "Object with organization id does not exist"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        serializer = OrganizationSerializer(organization)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+class ChildrenInfoFromOrganization(APIView):
+    def get(self, request, organization_id, *args, **kwargs):
+
+        try:
+            organization = Organization.objects.get(id = organization_id)
+        except Organization.DoesNotExist:
+            return Response(
+                {"res": "Object with organization id does not exist"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        children = organization.child.all()
+
+        serializer = ChildSerializer(children, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
