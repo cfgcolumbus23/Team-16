@@ -1,6 +1,6 @@
 [
     {
-        "model": "Child",
+        "model": "request_data.child",
         "pk": 1,
         "fields": {
             "first_name": "Pete",
@@ -11,7 +11,7 @@
         }
     },
     {
-        "model": "AssessmentDetail",
+        "model": "request_data.assessmentdetail",
         "pk": 1,
         "fields": {
             "literacy": 271,
@@ -24,7 +24,7 @@
         }
     },
     {
-        "model": "Assessment",
+        "model": "request_data.assessment",
         "pk": 1,
         "fields": {
             "date": "2015-01-01",
@@ -32,40 +32,43 @@
         }
     },
     {
-        "model": "Parent",
+        "model": "request_data.parent",
         "pk": 1,
         "fields": {
             "first_name": "Mary",
             "last_name": "Smith",
             "email": "mary_smith@gmail.com",
             "phone_number": "6145629072",
-            "address": "567 Woddbine Ave, Columbus, OH 43215"
+            "address": "567 Woddbine Ave, Columbus, OH 43215",
+            "login": 2
         }
     },
     {
-        "model": "Organization",
+        "model": "request_data.organization",
         "pk": 1,
         "fields": {
             "name": "Columbus Library",
             "email": "columbus_library@gmail.com",
             "phone_number": "8409122021",
             "address": "782 Rosewood Ave, Columbus, OH 43215",
-            "description": "The Columbus Library provides a variety of services to the community."
+            "description": "The Columbus Library provides a variety of services to the community.",
+            "login": 4
         }
     },
     {
-        "model": "Guide",
+        "model": "request_data.guide",
         "pk": 1,
         "fields": {
             "first_name": "Julie",
             "last_name": "Martin",
             "email": "julie@gmail.com",
             "phone_number": "8923020127",
-            "description": "Julie is a certified intervention guide with 10 years of experience."
+            "description": "Julie is a certified intervention guide with 10 years of experience.",
+            "login": 3
         }
     },
     {
-        "model": "Notes",
+        "model": "request_data.notes",
         "pk": 1,
         "fields": {
             "child": 1,
@@ -75,7 +78,7 @@
         }
     },
     {
-        "model": "Login",
+        "model": "request_data.login",
         "pk": 1,
         "fields": {
             "username": "admin_username",
@@ -83,7 +86,7 @@
         }
     },
     {
-        "model": "Login",
+        "model": "request_data.login",
         "pk": 2,
         "fields": {
             "username": "parent_username",
@@ -91,7 +94,7 @@
         }
     },
     {
-        "model": "Login",
+        "model": "request_data.login",
         "pk": 3,
         "fields": {
             "username": "guide_username",
@@ -99,7 +102,7 @@
         }
     },
     {
-        "model": "Login",
+        "model": "request_data.login",
         "pk": 4,
         "fields": {
             "username": "organization_username",
