@@ -53,6 +53,9 @@ function ScoresView() {
             <img id="line" src={line} alt="line" />
           </div>
           <p>More ^</p>
+          <div className="score">
+            <h3>Score: </h3>
+          </div>
         </section>
         <section className="scoresSection">
           <h3>Category 2:</h3>
@@ -61,6 +64,9 @@ function ScoresView() {
             <img id="line" src={line} alt="line" />
           </div>
           <p>More ^</p>
+          <div className="score">
+            <h3>Score: </h3>
+          </div>
         </section>
         <section className="scoresSection">
           <h3>Category 3:</h3>
@@ -69,6 +75,9 @@ function ScoresView() {
             <img id="line" src={line} alt="line" />
           </div>
           <p>More ^</p>
+          <div className="score">
+            <h3>Score: </h3>
+          </div>
         </section>
         <section className="scoresSection">
           <h3>Category 4:</h3>
@@ -77,6 +86,9 @@ function ScoresView() {
             <img id="line" src={line} alt="line" />
           </div>
           <p>More ^</p>
+          <div className="score">
+            <h3>Score: </h3>
+          </div>
         </section>
       </div>
     </div>
