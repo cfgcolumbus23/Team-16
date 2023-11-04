@@ -41,6 +41,17 @@ class ChildListApiView(APIView):
         serializer = ChildSerializer(children, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
+    def post(self, request, *args, **kwargs):
+        # Deserialize the request data
+        serializer = ChildSerializer(data=request.data)
+
+        if serializer.is_valid():
+            # Save the new child object
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 class ChildAssessmentDetailApiView(APIView):
 
@@ -57,6 +68,18 @@ class ChildAssessmentDetailApiView(APIView):
 
         serializer = AssessmentDetailSerializer(assessmentdetails, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def post(self, request, *args, **kwargs):
+        # Deserialize the request data
+        serializer = AssessmentDetailSerializer(data=request.data)
+
+        if serializer.is_valid():
+            # Save the new child object
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 class GuideInfoApiView(APIView):
 
@@ -75,6 +98,17 @@ class GuideInfoApiView(APIView):
         serializer = GuideSerializer(guide)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
+    def post(self, request, *args, **kwargs):
+        # Deserialize the request data
+        serializer = GuideSerializer(data=request.data)
+
+        if serializer.is_valid():
+            # Save the new child object
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 class ChildListFromGuideApiView(APIView):
     def get(self, request, guide_id, *args, **kwargs):
         '''
@@ -90,6 +124,18 @@ class ChildListFromGuideApiView(APIView):
         serializer = ChildSerializer(children, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
+    def post(self, request, *args, **kwargs):
+        # Deserialize the request data
+        serializer = ChildSerializer(data=request.data)
+
+        if serializer.is_valid():
+            # Save the new child object
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
 class ChildInfoFromChild(APIView):
     def get(self, request, child_id, *args, **kwargs):
 
@@ -103,6 +149,17 @@ class ChildInfoFromChild(APIView):
 
         serializer = ChildSerializer(child)
         return Response(serializer.data, status=status.HTTP_200_OK)
+    
+    def post(self, request, *args, **kwargs):
+        # Deserialize the request data
+        serializer = ChildSerializer(data=request.data)
+
+        if serializer.is_valid():
+            # Save the new child object
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 
 class OrganizationInfoFromChild(APIView):
@@ -122,6 +179,17 @@ class OrganizationInfoFromChild(APIView):
         serializer = OrganizationSerializer(organizations, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
+    def post(self, request, *args, **kwargs):
+        # Deserialize the request data
+        serializer = OrganizationSerializer(data=request.data)
+
+        if serializer.is_valid():
+            # Save the new child object
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 class GuideInfoFromGuide(APIView):
     def get(self, request, guide_id, *args, **kwargs):
 
@@ -135,6 +203,17 @@ class GuideInfoFromGuide(APIView):
 
         serializer = GuideSerializer(guide)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def post(self, request, *args, **kwargs):
+        # Deserialize the request data
+        serializer = GuideSerializer(data=request.data)
+
+        if serializer.is_valid():
+            # Save the new child object
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 class OrganizationInfoFromOrganization(APIView):
     def get(self, request, organization_id, *args, **kwargs):
@@ -149,6 +228,17 @@ class OrganizationInfoFromOrganization(APIView):
 
         serializer = OrganizationSerializer(organization)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def post(self, request, *args, **kwargs):
+        # Deserialize the request data
+        serializer = OrganizationSerializer(data=request.data)
+
+        if serializer.is_valid():
+            # Save the new child object
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class ChildrenInfoFromOrganization(APIView):
     def get(self, request, organization_id, *args, **kwargs):
@@ -165,3 +255,14 @@ class ChildrenInfoFromOrganization(APIView):
 
         serializer = ChildSerializer(children, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+    
+    def post(self, request, *args, **kwargs):
+        # Deserialize the request data
+        serializer = ChildSerializer(data=request.data)
+
+        if serializer.is_valid():
+            # Save the new child object
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
