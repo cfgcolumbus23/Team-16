@@ -8,10 +8,10 @@ from .serializers import ParentSerializer, ChildSerializer#, AssessmentSerialize
 
 # Create your views here.
 class ChildListApiView(APIView):
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request, *args, **kwargs):
 
-        children = Parent.objects.filter(parent = request.parent.id)
+        children = Parent.objects.filter(id = request.user.id)
         serializer = ChildSerializer(children, many = True)
         return Response(serializer.data, status=status.HTTP_200_OK)
