@@ -28,6 +28,8 @@ function GuideComponent() {
       )}
     </div>
   );
+
+  
 }
 
 export default GuideComponent;

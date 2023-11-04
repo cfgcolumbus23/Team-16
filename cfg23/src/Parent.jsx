@@ -9,6 +9,7 @@ import profile_pic from './assets/profile.png';
 import bar from './assets/color_bar.png';
 import line from './assets/line.png';
 
+// ChildBar
 function ChildBar() {
   const children = [
     { img: profile_pic, name: 'Child 1 Name', info: 'Information' },
