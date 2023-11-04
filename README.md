@@ -1,2 +1,2 @@
 # Team-16
-Default "main" branch is "backend"
+Default "main" branch is "master"
