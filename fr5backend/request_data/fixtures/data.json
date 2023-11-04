@@ -39,7 +39,8 @@
             "last_name": "Smith",
             "email": "mary_smith@gmail.com",
             "phone_number": "6145629072",
-            "address": "567 Woddbine Ave, Columbus, OH 43215"
+            "address": "567 Woddbine Ave, Columbus, OH 43215",
+            "login": 2
         }
     },
     {
@@ -50,7 +51,8 @@
             "email": "columbus_library@gmail.com",
             "phone_number": "8409122021",
             "address": "782 Rosewood Ave, Columbus, OH 43215",
-            "description": "The Columbus Library provides a variety of services to the community."
+            "description": "The Columbus Library provides a variety of services to the community.",
+            "login": 4
         }
     },
     {
@@ -61,7 +63,8 @@
             "last_name": "Martin",
             "email": "julie@gmail.com",
             "phone_number": "8923020127",
-            "description": "Julie is a certified intervention guide with 10 years of experience."
+            "description": "Julie is a certified intervention guide with 10 years of experience.",
+            "login": 3
         }
     },
     {
