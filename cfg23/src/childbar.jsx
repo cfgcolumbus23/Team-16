@@ -26,6 +26,7 @@ function ChildBar({ handleImageClick }) {
     <div className="childBar">
       <div className="title">
         <h3 align="center">Assigned Students</h3>
+        <h4 align="center">Select a Student</h4>
       </div>
       <div className="rand">
         {children.map((child, index) => (

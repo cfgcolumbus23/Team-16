@@ -26,6 +26,7 @@ function ChildBar() {
     <div className="childBar">
       <div class="title">
         <h3 align="center">Children</h3>
+        <h4 align="center">Select a Student</h4>
       </div>
       <div className = "rand">
       {children.map((child, index) => (
