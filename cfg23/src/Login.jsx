@@ -46,7 +46,9 @@ export default class Login extends React.Component {
           onChange: this.handlePasswordChange,
         })
       ),
-      React.createElement("button", { onClick: this.handleLogin }, "Login")
+      <a href="/parent">
+        <button onClick={this.handleLogin}>Login</button>
+      </a>
     );
   }
 }
