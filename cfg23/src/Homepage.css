@@ -1,13 +1,267 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html,
 body {
-  background-color: rgb(129, 129, 129);
-  overflow: hidden;
+  background-color: lightgray;
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
 }
 
-header {
+.homepage {
+  background-color: white;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.homepage h1 {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.main-container .main-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.section_1 {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 3%;
+  margin: 0.8rem;
+  padding: 0.8rem;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo {
+  width: 72%;
+  height: 100%;
+}
+
+.section_1 h2 {
+  margin-bottom: 0.8rem;
+}
+
+.section_1 p {
+  margin-bottom: 0.8rem;
+}
+
+.section_2 {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 3%;
+  margin: 0.8rem;
+  padding: 0.8rem;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.section_2 h2 {
+  margin-bottom: 0.8rem;
+}
+
+.section_2 p {
+  margin-bottom: 0.8rem;
+}
+
+.section_3 {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 3%;
+  margin: 0.8rem;
+  padding: 0.8rem;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.section_3 h2 {
+  margin-bottom: 0.8rem;
+}
+
+.section_3 p {
+  margin-bottom: 0.8rem;
+}
+
+.parents {
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 200px;
+  height: 200px;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.guides {
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 200px;
+  height: 200px;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.button2 {
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  box-shadow: 6px 6px 12px #c5c5c5,
+             -6px -6px 12px #ffffff;
+}
+
+.button2:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5,
+             inset -4px -4px 12px #ffffff;
+}
+
+.button2:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button2:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #00FFAA;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+/* This styles the overall navigation container */
+.navigation-container {
+  width: 100%; /* Full width */
+  background-color: black; /* Dark background */
+  overflow: hidden; /* Clear floats */
+}
+
+/* This styles each site navigation link */
+.site-navigation a {
+  float: left; /* Align links to the left side */
+  color: black; /* Text color */
+  text-align: center; /* Center text */
+  padding: 14px 20px; /* Spacing around text */
+  text-decoration: none; /* No underlines on links */
+  font-size: 17px; /* Size of the text */
+}
+
+/* Change the color of links on hover */
+.site-navigation a:hover {
+  background-color: ; /* Light grey background on hover */
+  color: gray; /* Black text on hover */
+  border-radius: 5px;
+}
+
+/* Add an active class to the current page's link (you'll have to set this class dynamically with your server-side code or JavaScript) */
+.site-navigation a.active {
+  background-color: #4CAF50; /* Add a different color to the current/active page link */
+  color: white;
+}
+
+
+.button2:hover {
+  color: #ffffff;
+  border: 1px solid #00FFAA;
+  cursor: pointer;
+}
+
+.button2:hover:before {
+  top: -35%;
+  background-color: #00FFAA;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button2:hover:after {
+  top: -45%;
+  background-color: #00FFAA;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button2 {
+  margin-top: 80px;;
+}
+
+.navigation-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-bottom: 5px solid black;
+}
+
+.organizations {
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 200px;
+  height: 200px;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* header {
   display: flex;
   justify-content: space-between;
   border-bottom: 5px solid black;
@@ -45,7 +299,7 @@ header {
   height: 73px;
   border: 2px solid black;
   border-radius: 0;
-  
+
 }
 
 .button:hover {
@@ -83,7 +337,7 @@ header {
   margin-top: 50px;
 }**/
 
-.parent-login {
+/* .parent-login {
   width: 20%;
   border: solid green;
   border-radius: 50%;
@@ -120,4 +374,4 @@ header {
   justify-content: space-around;
   margin-top: -100px;
   height: 50%;
-}
+} */
