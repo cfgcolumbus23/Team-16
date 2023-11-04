@@ -10,17 +10,19 @@ import "./styles/referralview.css";
 function ChildBar() {
   return (
     <div className="childBar">
-      <h3>Children</h3>
       <section className="childSection">
-        <img src={profilePic} alt="Profile Pic"></img>
+        <h2>Children</h2>
+      </section>
+      <section className="childSection">
+        <img src={profilePic} alt="Profile Pic" height="108" width="108"></img>
         <p>Child 1</p>
       </section>
       <section className="childSection">
-        <img src={profilePic} alt="Profile Pic"></img>
+        <img src={profilePic} alt="Profile Pic" height="108" width="108"></img>
         <p>Child 2</p>
       </section>
       <section className="childSection">
-        <img src={profilePic} alt="Profile Pic"></img>
+        <img src={profilePic} alt="Profile Pic" height="108" width="108"></img>
         <p>Child 3</p>
       </section>
     </div>
@@ -33,26 +35,28 @@ function ScoresView() {
     <div className="scoresView">
       <h2>"Child 1's" Scores:</h2>
       <h3>Overall Score: ---%</h3>
-      <section className="scoresSection">
-        <h3>Category 1:</h3>
-        <p>----+--</p>
-        <p>More ^</p>
-      </section>
-      <section className="scoresSection">
-        <h3>Category 2:</h3>
-        <p>----+--</p>
-        <p>More ^</p>
-      </section>
-      <section className="scoresSection">
-        <h3>Category 3:</h3>
-        <p>----+--</p>
-        <p>More ^</p>
-      </section>
-      <section className="scoresSection">
-        <h3>Category 4:</h3>
-        <p>----+--</p>
-        <p>More ^</p>
-      </section>
+      <div className="scoresContainer">
+        <section className="scoresSection">
+          <h3>Category 1:</h3>
+          <p>----+--</p>
+          <p>More ^</p>
+        </section>
+        <section className="scoresSection">
+          <h3>Category 2:</h3>
+          <p>----+--</p>
+          <p>More ^</p>
+        </section>
+        <section className="scoresSection">
+          <h3>Category 3:</h3>
+          <p>----+--</p>
+          <p>More ^</p>
+        </section>
+        <section className="scoresSection">
+          <h3>Category 4:</h3>
+          <p>----+--</p>
+          <p>More ^</p>
+        </section>
+      </div>
     </div>
   );
 }
@@ -72,30 +76,32 @@ function ProfileView() {
 function ReferralView() {
   return (
     <div className="referralView">
-      <section className="referralSection">
-        <p>Category 1 Referrals:</p>
-        <p>Group a</p>
-        <p>Group b</p>
-        <p>Group c</p>
-      </section>
-      <section className="referralSection">
-        <p>Category 2 Referrals:</p>
-        <p>Group i</p>
-        <p>Group j</p>
-        <p>Group k</p>
-      </section>
-      <section className="referralSection">
-        <p>Category 3 Referrals:</p>
-        <p>Group q</p>
-        <p>Group r</p>
-        <p>Group s</p>
-      </section>
-      <section className="referralSection">
-        <p>Category 4 Referrals:</p>
-        <p>Group x</p>
-        <p>Group y</p>
-        <p>Group z</p>
-      </section>
+      <div className="referralContainer">
+        <section className="referralSection">
+          <h3>Category 1 Referrals:</h3>
+          <p>Group a</p>
+          <p>Group b</p>
+          <p>Group c</p>
+        </section>
+        <section className="referralSection">
+          <h3>Category 2 Referrals:</h3>
+          <p>Group i</p>
+          <p>Group j</p>
+          <p>Group k</p>
+        </section>
+        <section className="referralSection">
+          <h3>Category 3 Referrals:</h3>
+          <p>Group q</p>
+          <p>Group r</p>
+          <p>Group s</p>
+        </section>
+        <section className="referralSection">
+          <h3>Category 4 Referrals:</h3>
+          <p>Group x</p>
+          <p>Group y</p>
+          <p>Group z</p>
+        </section>
+      </div>
     </div>
   );
 }
@@ -105,8 +111,10 @@ export default function ParentView() {
     <div className="parentView">
       <ChildBar />
       <ScoresView />
-      <ProfileView />
-      <ReferralView />
+      <div className="parentContainer">
+        <ProfileView />
+        <ReferralView />
+      </div>
     </div>
   );
 }
